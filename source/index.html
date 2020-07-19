@@ -1,12 +1,103 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
 
-  </body>
+<body>
+  <header class="page-header">
+    <nav class="menu-nav">
+      <a><img src="https://via.placeholder.com/86x35" width="86" height="35" alt="логотип Мишка"></a>
+      <img src="https://via.placeholder.com/20x14" width="20" height="14" alt="навигация для выпадающего меню">
+      <ul class="menu-nav__list visually-hidden">
+        <li class="menu-nav__item">
+          <a href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="menu-nav__item"><a href="#">Поиск по сайту</a></li>
+        <li class="menu-nav__item"><a href="#">Корзина: пока пуста</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Магазин Мишка – вязанные товары ручной работы</h1>
+    <section class="intro">
+      <h2>Милые штуки ручной работы для дома</h2>
+      <ul class="intro__list">
+        <li class="intro__item">
+          <a href="catalog.ru">Предметы интерьера</a>
+        </li>
+        <li class="intro__item">
+          <a href="catalog.ru">Детские игрушки</a>
+        </li>
+      </ul>
+    </section>
+    <section class="featured">
+      <h2>Вязаные корзинки</h2>
+      <p>Товар недели</p>
+      <p>Экологически чистая пряжа,
+        ручная работа. Доступны в&nbsp;шести расцветках, и&nbsp;трех размерах.</p>
+      <table>
+        <tr>
+          <td>Цвет:</td>
+          <td>«Тиффани»/серый</td>
+        </tr>
+        <tr>
+          <td>Диаметр:</td>
+          <td>25 см</td>
+        </tr>
+        <tr>
+          <td>Диаметр:</td>
+          <td>15 см</td>
+        </tr>
+      </table>
+      <img src="https://via.placeholder.com/260x315" width="260" height="315" alt="три корзинки в руках">
+      <p>Цена: 990 руб.</p>
+      <a class="btn" href="#">Заказать</a>
+    </section>
+    <section class="entry">
+      <h2>Коротко о нас:</h2>
+      <ul class="entry__list">
+        <li class="entry__item">Экологически чистые материалы</li>
+        <li class="entry__item">Скандинавский стиль по&nbsp;российской цене</li>
+        <li class="entry__item">Увеличивает лайки на&nbsp;фотографиях</li>
+        <li class="entry__item">Связано вручную с&nbsp;любовью и умилением</li>
+        <li class="entry__item">Поддержка отечественного производителя</li>
+        <li class="entry__item">Поставляется в&nbsp;подарочной упаковке</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__social social-list">
+      <li class="social-list__item">
+        <a href="#" aria-label="Инстаграм"><img src="https://via.placeholder.com/22x21" width="22" height="21"
+            alt="Инстаграм"></a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" aria-label="Фейсбук"><img src="https://via.placeholder.com/15x28" width="15" height="28"
+            alt="Фейсбук"></a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" aria-label="Твиттер"><img src="https://via.placeholder.com/23x20" width="23" height="20"
+            alt="Твиттер"></a>
+      </li>
+    </ul>
+    <div class="footer__copyright">
+      <span>Разработано</span>
+      <a href="https://up.htmlacademy.ru/adaptive/20"
+        aria-label="переход на страницу курса HTMLacademy: Профессиональная вёрстка сайтов">
+        <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="логотип HTMLacademy"></a>
+    </div>
+  </footer>
+
+
+</body>
+
 </html>
