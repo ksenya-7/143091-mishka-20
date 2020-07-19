@@ -9,13 +9,17 @@
 <body>
   <header class="page-header">
     <nav class="menu-nav">
-      <img src="https://via.placeholder.com/86x35" alt="логотип Мишка">
-      <img src="https://via.placeholder.com/20x14" alt="навигация для выпадающего меню">
+      <a><img src="https://via.placeholder.com/86x35" width="86" height="35" alt="логотип Мишка"></a>
+      <img src="https://via.placeholder.com/20x14" width="20" height="14" alt="навигация для выпадающего меню">
       <ul class="menu-nav__list visually-hidden">
-        <li class="menu-nav__item">Каталог товаров</li>
-        <li class="menu-nav__item">Вязание на заказ</li>
-        <li class="menu-nav__item">Поиск по сайту</li>
-        <li class="menu-nav__item">Корзина: пока пуста</li>
+        <li class="menu-nav__item">
+          <a href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="menu-nav__item"><a href="#">Поиск по сайту</a></li>
+        <li class="menu-nav__item"><a href="#">Корзина: пока пуста</a></li>
       </ul>
     </nav>
   </header>
@@ -35,10 +39,10 @@
     </section>
     <section class="featured">
       <h2>Вязаные корзинки</h2>
-      <p>ТОВАР НЕДЕЛИ</p>
+      <p>Товар недели</p>
       <p>Экологически чистая пряжа,
-        ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-      <tab>
+        ручная работа. Доступны в&nbsp;шести расцветках, и&nbsp;трех размерах.</p>
+      <table>
         <tr>
           <td>Цвет:</td>
           <td>«Тиффани»/серый</td>
@@ -51,10 +55,10 @@
           <td>Диаметр:</td>
           <td>15 см</td>
         </tr>
-      </tab>
-      <img src="https://via.placeholder.com/260x315" alt="три корзинки в руках">
+      </table>
+      <img src="https://via.placeholder.com/260x315" width="260" height="315" alt="три корзинки в руках">
       <p>Цена: 990 руб.</p>
-      <button class="button">ЗАКАЗАТЬ</button>
+      <a class="btn" href="#">Заказать</a>
     </section>
     <section class="entry">
       <h2>Коротко о нас:</h2>
@@ -71,21 +75,24 @@
   </main>
 
   <footer class="footer">
-    <ul class="social__list">
-      <li class="social__item">
-        <a href="#" aria-label="Инстаграм"><img src="https://via.placeholder.com/22x21" alt="Инстаграм"></a>
+    <ul class="footer__social social-list">
+      <li class="social-list__item">
+        <a href="#" aria-label="Инстаграм"><img src="https://via.placeholder.com/22x21" width="22" height="21"
+            alt="Инстаграм"></a>
       </li>
-      <li class="social__item">
-        <a href="#" aria-label="Фейсбук"><img src="https://via.placeholder.com/15x28" alt="Фейсбук"></a>
+      <li class="social-list__item">
+        <a href="#" aria-label="Фейсбук"><img src="https://via.placeholder.com/15x28" width="15" height="28"
+            alt="Фейсбук"></a>
       </li>
-      <li class="social__item">
-        <a href="#" aria-label="Твиттер"><img src="https://via.placeholder.com/23x20" alt="Твиттер"></a>
+      <li class="social-list__item">
+        <a href="#" aria-label="Твиттер"><img src="https://via.placeholder.com/23x20" width="23" height="20"
+            alt="Твиттер"></a>
       </li>
     </ul>
     <div class="footer__copyright">
       <span>Разработано</span>
       <a href="https://up.htmlacademy.ru/adaptive/20"
-        aria-label="переход на страницу курса HTMLacademy: лендинг интенсива «HTML и CSS. Профессиональная вёрстка сайтов»">
+        aria-label="переход на страницу курса HTMLacademy: Профессиональная вёрстка сайтов">
         <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="логотип HTMLacademy"></a>
     </div>
   </footer>
