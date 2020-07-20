@@ -40,7 +40,7 @@
           <li>
             <label class="filter-radio__label">
               <input class="filter-radio__input" type="radio" name="descript" value="accessory" checked>
-              <span class="filter-radio__input--circle"></span>
+              <span class="filter-radio__button  filter-radio__button--circle"></span>
               <span>Аксессуар для&nbsp;интерьера</span>
             </label>
           </li>
@@ -48,7 +48,7 @@
           <li>
             <label class="filter-radio__label">
               <input class="filter-radio__input" type="radio" name="descript" value="toy">
-              <span class="filter-radio__input--circle"></span>
+              <span class="filter-radio__button  filter-radio__button--circle"></span>
               <span>Детская игрушка</span>
             </label>
           </li>
@@ -61,6 +61,7 @@
           <li class="filter-checkbox__item">
             <label class="filter-checkbox__label">
               <input class="filter-checkbox__input" type="checkbox" name="color" value="white" checked>
+              <span class="filter-checkbox__custombox"></span>
               <span>Белый</span>
             </label>
           </li>
@@ -68,6 +69,7 @@
           <li class="filter-checkbox__item">
             <label class="filter-checkbox__label">
               <input class="filter-checkbox__input" type="checkbox" name="color" value="grey" checked>
+              <span class="filter-checkbox__custombox"></span>
               <span>Серый</span>
             </label>
           </li>
@@ -75,6 +77,7 @@
           <li class="filter-checkbox__item">
             <label class="filter-checkbox__label">
               <input class="filter-checkbox__input" type="checkbox" name="color" value="tiffany">
+              <span class="filter-checkbox__custombox"></span>
               <span>«Тиффани»</span>
             </label>
           </li>
@@ -82,6 +85,7 @@
           <li class="filter-checkbox__item">
             <label class="filter-checkbox__label">
               <input class="filter-checkbox__input" type="checkbox" name="color" value="black">
+              <span class="filter-checkbox__custombox"></span>
               <span>Черный</span>
             </label>
           </li>
@@ -89,6 +93,7 @@
           <li class="filter-checkbox__item">
             <label class="filter-checkbox__label">
               <input class="filter-checkbox__input" type="checkbox" name="color" value="pink">
+              <span class="filter-checkbox__custombox"></span>
               <span>Розовый</span>
             </label>
           </li>
@@ -96,6 +101,7 @@
           <li class="filter-checkbox__item">
             <label class="filter-checkbox__label">
               <input class="filter-checkbox__input" type="checkbox" name="color" value="orange">
+              <span class="filter-checkbox__custombox"></span>
               <span>Оранжевый</span>
             </label>
           </li>
@@ -127,6 +133,7 @@
       <fieldset class="filter-userphone">
         <legend>тел</legend>
         <label class="filter-userphone__label">
+          <span class="visually-hidden">телефон</span>
           <input class="filter-userphone__input" type="tel" name="tel-user" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
         </label>
       </fieldset>
@@ -134,13 +141,15 @@
       <fieldset class="filter-usermail">
         <legend>E-mail</legend>
         <label class="filter-usermail__label">
-          <input class="filter-usermail__input" type="e-mail" name="mail-user" placeholder="Ваш Email*">
+          <span class="visually-hidden">email</span>
+          <input class="filter-usermail__input" type="email" name="mail-user" placeholder="Ваш Email*">
         </label>
       </fieldset>
 
       <fieldset class="filter-sundry">
         <legend>Доп</legend>
         <label class="filter-sundry__label">
+          <span class="visually-hidden">комментарий</span>
           <textarea rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </label>
       </fieldset>
@@ -151,16 +160,16 @@
   </main>
 
   <footer class="footer">
-    <ul class="social__list">
-      <li class="social__item">
+    <ul class="footer__social social-list">
+      <li class="social-list__item">
         <a href="#" aria-label="Инстаграм"><img src="https://via.placeholder.com/22x21" width="22" height="21"
             alt="Инстаграм"></a>
       </li>
-      <li class="social__item">
+      <li class="social-list__item">
         <a href="#" aria-label="Фейсбук"><img src="https://via.placeholder.com/15x28" width="15" height="28"
             alt="Фейсбук"></a>
       </li>
-      <li class="social__item">
+      <li class="social-list__item">
         <a href="#" aria-label="Твиттер"><img src="https://via.placeholder.com/23x20" width="23" height="20"
             alt="Твиттер"></a>
       </li>
