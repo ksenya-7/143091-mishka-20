@@ -12,7 +12,8 @@
       <a href="index.html" aria-label="переход на главную">
         <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="логотип Мишка">
       </a>
-      <img src="https://via.placeholder.com/20x14" width="20" height="14" alt="навигация для выпадающего меню">
+      <button type="button"><img src="https://via.placeholder.com/20x14" width="20" height="14"
+          alt="навигация для выпадающего меню"></button>
       <ul class="menu-nav__list visually-hidden">
         <li class="menu-nav__item">
           <a href="catalog.html">Каталог товаров</a>
@@ -60,23 +61,39 @@
           <a href="#" aria-label="положить в корзину"></a>
         </li>
       </ul>
+    </section>
 
-
+    <section class="demonstration">
+      <h2>Процесс производства</h2>
+      <div class="screen">
+        <video id=0 controls width=260 height=150 aria-label="как появляются наши товары">
+          <source src="video/process.ogv" type='video/ogg; codecs="theora, vorbis"'>
+          <source src="video/process.webm" type='video/webm'>
+          <source src="video/process.mp4" type='video/mp4'>
+          <p>Video is not visible, most likely your browser does not support HTML5 video</p>
+        </video>
+        <button class="play">
+          <img src="https://via.placeholder.com/260x195" width="101" height="77" alt="нажать для просмотра видео">
+        </button>
+      </div>
+      <p>По&nbsp;просьбам наших любимых фолловеров мы сняли для&nbsp;вас подробное видео о&nbsp;том, как появляются наши
+        товары.</p>
+      <a href="#" class="btn">Сделать заказ</a>
     </section>
 
   </main>
 
   <footer class="footer">
-    <ul class="social__list">
-      <li class="social__item">
+    <ul class="footer__social social-list">
+      <li class="social-list__item">
         <a href="#" aria-label="Инстаграм"><img src="https://via.placeholder.com/22x21" width="22" height="21"
             alt="Инстаграм"></a>
       </li>
-      <li class="social__item">
+      <li class="social-list__item">
         <a href="#" aria-label="Фейсбук"><img src="https://via.placeholder.com/15x28" width="15" height="28"
             alt="Фейсбук"></a>
       </li>
-      <li class="social__item">
+      <li class="social-list__item">
         <a href="#" aria-label="Твиттер"><img src="https://via.placeholder.com/23x20" width="23" height="20"
             alt="Твиттер"></a>
       </li>
