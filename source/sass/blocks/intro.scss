@@ -7,16 +7,15 @@
   width: 320px;
   min-height: 487px;
 
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
 
-  background-image: url('../img/hero-mobile@1x.jpg');
+  background-image: url("../img/hero-mobile@1x.jpg");
   background-color: $color-fondecor;
   background-position: -127px -19px;
   background-repeat: no-repeat;
   background-size: 575px 373px;
-
 }
 
 .intro__title {

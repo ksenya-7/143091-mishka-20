@@ -11,7 +11,7 @@
 html {
   line-height: 1.15;
   /*1 */
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   /*2 */
 }
 
@@ -67,7 +67,7 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace;
+  font-family: monospace;
   /*1 */
   font-size: 1em;
   /*2 */
@@ -92,8 +92,6 @@ a {
 abbr[title] {
   border-bottom: none;
   /*1 */
-  text-decoration: underline;
-  /*2 */
   text-decoration: underline dotted;
   /*2 */
 }
@@ -115,7 +113,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace;
   /*1 */
   font-size: 1em;
   /*2 */
@@ -214,7 +212,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -314,7 +312,7 @@ textarea {
  */
 
 [type="search"] {
-  -webkit-appearance: textfield;
+  appearance: textfield;
   /*1 */
   outline-offset: -2px;
   /*2 */
@@ -325,7 +323,7 @@ textarea {
  */
 
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 /**
@@ -334,7 +332,7 @@ textarea {
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
+  appearance: button;
   /*1 */
   font: inherit;
   /*2 */
