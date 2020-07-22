@@ -1,5 +1,5 @@
 @import "variables.scss";
-@import "mixins.scss";
+// @import "mixins.scss";
 
 //vendor
 //--------------
@@ -17,6 +17,7 @@
 
 //blocks
 //--------------
+@import "blocks/btn.scss";
 @import "blocks/entry.scss";
 @import "blocks/catalog.scss";
 @import "blocks/featured.scss";
