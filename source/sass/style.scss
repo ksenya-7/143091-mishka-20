@@ -1,1 +1,25 @@
-// Начните писать стили здесь
+@import "variables.scss";
+@import "mixins.scss";
+
+//vendor
+//--------------
+@import"vendor/normalize.scss";
+
+
+//global
+//--------------
+@import"global/containers.scss";
+@import"global/fonts.scss";
+@import"global/reboot.scss";
+@import"global/typography.scss";
+@import"global/utils.scss";
+
+
+//blocks
+//--------------
+@import "blocks/entry.scss";
+@import "blocks/catalog.scss";
+@import "blocks/featured.scss";
+@import "blocks/footer.scss";
+@import "blocks/intro.scss";
+@import "blocks/menu-nav.scss";

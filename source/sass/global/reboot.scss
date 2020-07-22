@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+
+  color: $color-text;
+
+  text-decoration: none;
+}
+
+img,
+video,
+svg {
+  display: block;
+  // max-width: 100%;
+  height: auto;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 259px;
+  height: 52px;
+  padding: 16px auto;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-border;
+
+  border: 2px solid $color-border;
+}

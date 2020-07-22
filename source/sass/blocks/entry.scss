@@ -1,0 +1,50 @@
+.entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  width: 260px;
+  // min-height: 1452px;
+
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+
+  color: $color-text;
+}
+
+.entry__title {
+  width: 260px;
+  margin: 31px 0 0 0;
+  padding: 0;
+
+  tab-size: left;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.entry__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.entry__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  width: 260px;
+  min-height: 133px;
+  margin: 0;
+  padding: 0;
+}
