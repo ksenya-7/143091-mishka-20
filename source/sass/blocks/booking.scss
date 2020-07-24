@@ -6,6 +6,24 @@
   height: auto;
 }
 
+.booking__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 177px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 30px;
+
+  background-color: $color-underline;
+}
+
 .booking__preface {
   font-weight: normal;
   font-size: 13px;
