@@ -1,0 +1,19 @@
+.filter-sundry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 73px;
+  margin: 35px 0 0 0;
+  padding: 0;
+}
+
+.filter-sundry__input {
+  width: 100%;
+  min-height: 40px;
+  margin: 28px 0 0 0;
+  padding: 17px 0 0 18px;
+
+  border: 1px solid $color-text;
+}

@@ -62,133 +62,143 @@
 
     <main class="">
       <h1 class="visually-hidden">Магазин Мишка – вязание на заказ</h1>
-      <h2>Вязание на заказ</h2>
-      <p>Мы будем рады воплотить в&nbsp;жизнь ваши пожелания! Заполните простую форму заказа и&nbsp;мы свяжемся
-        с&nbsp;вами, чтобы уточнить детали.</p>
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="filter-radio">
-          <legend>Тип</legend>
-          <ul class="filter-radio__list">
-            <li>
-              <label class="filter-radio__label">
-                <input class="filter-radio__input" type="radio" name="descript" value="accessory" checked>
-                <span class="filter-radio__button  filter-radio__button--circle"></span>
-                <span>Аксессуар для&nbsp;интерьера</span>
-              </label>
-            </li>
+      <div class="booking">
+        <h2 class="booking__title">Вязание на заказ</h2>
+        <p class="booking__preface">Мы будем рады воплотить в&nbsp;жизнь ваши&nbsp;пожелания! Заполните простую форму
+          заказа
+          и&nbsp;мы свяжемся
+          с&nbsp;вами, чтобы уточнить детали.</p>
+        <form class="booking__form" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="booking__fieldset filter-radio">
+            <legend class="booking__legend">Тип</legend>
+            <ul class="filter-radio__list">
+              <li class="filter-radio__item">
+                <label class="filter-radio__label">
+                  <input class="filter-radio__input" type="radio" name="descript" value="accessory" checked>
+                  <span class="filter-radio__button  filter-radio__button--circle"></span>
+                  <span>Аксессуар для интерьера</span>
+                </label>
+              </li>
 
-            <li>
-              <label class="filter-radio__label">
-                <input class="filter-radio__input" type="radio" name="descript" value="toy">
-                <span class="filter-radio__button  filter-radio__button--circle"></span>
-                <span>Детская игрушка</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="filter-checkbox">
-          <legend>Цвет</legend>
-          <ul class="filter-checkbox__list">
+              <li class="filter-radio__item">
+                <label class="filter-radio__label">
+                  <input class="filter-radio__input" type="radio" name="descript" value="toy">
+                  <span class="filter-radio__button  filter-radio__button--circle"></span>
+                  <span>Детская игрушка</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-            <li class="filter-checkbox__item">
-              <label class="filter-checkbox__label">
-                <input class="filter-checkbox__input" type="checkbox" name="color" value="white" checked>
-                <span class="filter-checkbox__custombox"></span>
-                <span>Белый</span>
-              </label>
-            </li>
+          <fieldset class="booking__fieldset filter-checkbox">
+            <legend class="booking__legend">Цвет</legend>
+            <ul class="filter-checkbox__list">
 
-            <li class="filter-checkbox__item">
-              <label class="filter-checkbox__label">
-                <input class="filter-checkbox__input" type="checkbox" name="color" value="grey" checked>
-                <span class="filter-checkbox__custombox"></span>
-                <span>Серый</span>
-              </label>
-            </li>
+              <li class="filter-checkbox__item">
+                <label class="filter-checkbox__label">
+                  <input class="filter-checkbox__input" type="checkbox" name="color" value="white" checked>
+                  <span class="filter-checkbox__custombox"></span>
+                  <span>Белый</span>
+                </label>
+              </li>
 
-            <li class="filter-checkbox__item">
-              <label class="filter-checkbox__label">
-                <input class="filter-checkbox__input" type="checkbox" name="color" value="tiffany">
-                <span class="filter-checkbox__custombox"></span>
-                <span>«Тиффани»</span>
-              </label>
-            </li>
+              <li class="filter-checkbox__item">
+                <label class="filter-checkbox__label">
+                  <input class="filter-checkbox__input" type="checkbox" name="color" value="grey" checked>
+                  <span class="filter-checkbox__custombox"></span>
+                  <span>Серый</span>
+                </label>
+              </li>
 
-            <li class="filter-checkbox__item">
-              <label class="filter-checkbox__label">
-                <input class="filter-checkbox__input" type="checkbox" name="color" value="black">
-                <span class="filter-checkbox__custombox"></span>
-                <span>Черный</span>
-              </label>
-            </li>
+              <li class="filter-checkbox__item">
+                <label class="filter-checkbox__label">
+                  <input class="filter-checkbox__input" type="checkbox" name="color" value="tiffany">
+                  <span class="filter-checkbox__custombox"></span>
+                  <span>«Тиффани»</span>
+                </label>
+              </li>
 
-            <li class="filter-checkbox__item">
-              <label class="filter-checkbox__label">
-                <input class="filter-checkbox__input" type="checkbox" name="color" value="pink">
-                <span class="filter-checkbox__custombox"></span>
-                <span>Розовый</span>
-              </label>
-            </li>
+              <li class="filter-checkbox__item">
+                <label class="filter-checkbox__label">
+                  <input class="filter-checkbox__input" type="checkbox" name="color" value="black">
+                  <span class="filter-checkbox__custombox"></span>
+                  <span>Черный</span>
+                </label>
+              </li>
 
-            <li class="filter-checkbox__item">
-              <label class="filter-checkbox__label">
-                <input class="filter-checkbox__input" type="checkbox" name="color" value="orange">
-                <span class="filter-checkbox__custombox"></span>
-                <span>Оранжевый</span>
-              </label>
-            </li>
+              <li class="filter-checkbox__item">
+                <label class="filter-checkbox__label">
+                  <input class="filter-checkbox__input" type="checkbox" name="color" value="pink">
+                  <span class="filter-checkbox__custombox"></span>
+                  <span>Розовый</span>
+                </label>
+              </li>
 
-          </ul>
-        </fieldset>
+              <li class="filter-checkbox__item">
+                <label class="filter-checkbox__label">
+                  <input class="filter-checkbox__input" type="checkbox" name="color" value="orange">
+                  <span class="filter-checkbox__custombox"></span>
+                  <span>Оранжевый</span>
+                </label>
+              </li>
 
-        <fieldset class="filter-username">
-          <legend>ФИО</legend>
-          <ul>
-            <li>
-              <label class="filter-username__label">Имя:
-                <input class="filter-username__input" type="text" name="name-user" placeholder="Введите ваше имя*">
-              </label>
-            </li>
-            <li>
-              <label class="filter-username__label">Фамилия:
-                <input class="filter-username__input" type="text" name="name-user" placeholder="Укажите фамилию*">
-              </label>
-            </li>
-            <li>
-              <label class="filter-username__label">Отчество:
-                <input class="filter-username__input" type="text" name="name-user" placeholder="Отчество, если желаете">
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+            </ul>
+          </fieldset>
 
-        <fieldset class="filter-userphone">
-          <legend>тел</legend>
-          <label class="filter-userphone__label">
-            <span class="visually-hidden">телефон</span>
-            <input class="filter-userphone__input" type="tel" name="tel-user" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
-          </label>
-        </fieldset>
+          <fieldset class="booking__fieldset filter-username">
+            <legend class="booking__legend">ФИО</legend>
+            <ul class="filter-username__list">
+              <li class="filter-username__item">
+                <label class="filter-username__label" for="name-user">Имя:</label>
+                <input class="booking__input filter-username__input" id="name-user" type="text" name="name-user"
+                  placeholder="Введите ваше имя*">
+              </li>
 
-        <fieldset class="filter-usermail">
-          <legend>E-mail</legend>
-          <label class="filter-usermail__label">
-            <span class="visually-hidden">email</span>
-            <input class="filter-usermail__input" type="email" name="mail-user" placeholder="Ваш Email*">
-          </label>
-        </fieldset>
+              <li class="filter-username__item">
+                <label class="filter-username__label" for="surname-user">Фамилия:</label>
+                <input class="booking__input filter-username__input" id="surname-user" type="text" name="surname-user"
+                  placeholder="Укажите фамилию*">
+              </li>
 
-        <fieldset class="filter-sundry">
-          <legend>Доп</legend>
-          <label class="filter-sundry__label">
-            <span class="visually-hidden">комментарий</span>
-            <textarea rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </label>
-        </fieldset>
-        <p>*Поля обязательны для заполнения</p>
-        <button class="btn" type="submit">Отправить заказ</button>
+              <li class="filter-username__item">
+                <label class="filter-username__label" for="fathername-user">Отчество:</label>
+                <input class="booking__input filter-username__input" id="fathername-user" type="text"
+                  name="fathername-user" placeholder="Отчество, если желаете">
+              </li>
+            </ul>
+          </fieldset>
 
-      </form>
+          <fieldset class="booking__fieldset filter-userphone">
+            <legend class="booking__legend">тел</legend>
+            <label class="filter-userphone__label">
+              <span class="visually-hidden">телефон</span>
+              <input class="booking__input filter-userphone__input" type="tel" name="tel-user"
+                placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            </label>
+          </fieldset>
+
+          <fieldset class="booking__fieldset filter-usermail">
+            <legend class="booking__legend">E-mail</legend>
+            <label class="filter-usermail__label">
+              <span class="visually-hidden">email</span>
+              <input class="booking__input filter-usermail__input" type="email" name="mail-user"
+                placeholder="Ваш Email*">
+            </label>
+          </fieldset>
+
+          <fieldset class="booking__fieldset filter-sundry">
+            <legend class="booking__legend">Доп</legend>
+            <label class="filter-sundry__label">
+              <span class="visually-hidden">комментарий</span>
+              <textarea class="filter-sundry__input" rows="6"
+                placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </label>
+          </fieldset>
+          <p class="booking__comments">*Поля обязательны для заполнения</p>
+          <button class="btn booking__button" type="submit">Отправить заказ</button>
+
+        </form>
+      </div>
     </main>
 
     <footer class="footer">
