@@ -1,0 +1,41 @@
+.filter-username {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  // min-height: auto;
+  margin: 32px 0 0 0;
+  padding: 0;
+}
+
+.filter-username__list {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filter-username__item {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 92px;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-username__label {
+  min-height: 25px;
+  margin: 29px 0 0 0;
+}
+
+.filter-username__input {
+  min-height: 27px;
+  border-bottom: 2px solid $color-text;
+}

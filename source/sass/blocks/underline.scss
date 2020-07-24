@@ -1,0 +1,14 @@
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 30px;
+
+  width: 93%;
+  height: 1px;
+  background-color: $color-mail;
+}

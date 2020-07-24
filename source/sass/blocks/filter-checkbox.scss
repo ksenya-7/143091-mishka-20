@@ -1,0 +1,33 @@
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  // min-height: 171px;
+  margin: 30px 0 0 0;
+  padding: 0;
+}
+
+.filter-checkbox__list {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+
+  width: 100%;
+  // min-height: 360px;
+  margin: 24px 0 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filter-checkbox__item {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: 60px;
+  margin: 0;
+  padding: 0;
+}

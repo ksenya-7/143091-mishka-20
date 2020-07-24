@@ -12,7 +12,7 @@
     <header class="page-header">
       <nav class="menu-nav">
         <div class="menu-nav__top">
-          <a class="menu-nav__logo" aria-label="логотип Мишка">
+          <a href="index.html" class="menu-nav__logo" aria-label="логотип Мишка">
             <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="85.589px" height="35.034px"
               viewBox="32.458 20.216 85.589 35.034" enable-background="new 32.458 20.216 85.589 35.034"
@@ -64,10 +64,11 @@
       <h1 class="visually-hidden">Каталог магазина Мишка – вязанные товары ручной работы</h1>
       <section class="catalog">
         <h2 class="catalog__title">Каталог товаров</h2>
-        <!-- <div class="container-min"> -->
+
         <ul class="catalog__list">
           <li class="catalog__item">
-            <img src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="зайчик-попрыгайчик">
+            <img class="catalog__picture" src="img/photo-hare-mobile@1x.jpg" width="260" height="195"
+              alt="зайчик-попрыгайчик">
             <a href="#">
               <h3 class="catalog__link">Зайчик-попрыгайчик</h3>
             </a>
@@ -100,26 +101,28 @@
             </div>
           </li>
         </ul>
-        <!-- </div> -->
+
       </section>
 
       <section class="demonstration">
-        <h2>Процесс производства</h2>
-        <div class="screen">
-          <video id=0 controls width=260 height=150 aria-label="как появляются наши товары">
+        <h2 class="demonstration__title">Процесс производства</h2>
+        <div class="demonstration__screen">
+          <!-- <video id=0 controls width=260 height=150 aria-label="как появляются наши товары">
             <source src="video/process.ogv" type='video/ogg; codecs="theora, vorbis"'>
             <source src="video/process.webm" type='video/webm'>
             <source src="video/process.mp4" type='video/mp4'>
             <p>Video is not visible, most likely your browser does not support HTML5 video</p>
-          </video>
-          <button class="play" type="button" aria-label="просмотр видео">
-            <img src="https://via.placeholder.com/260x195" width="101" height="77" alt="нажать для просмотра видео">
+          </video> -->
+          <button class="demonstration__key play" type="button" aria-label="просмотр видео">
+            <!-- <img src="img/icon-play.svg" width="101" height="77" alt="нажать для просмотра видео"> -->
           </button>
         </div>
-        <p>По&nbsp;просьбам наших любимых фолловеров мы сняли для&nbsp;вас подробное видео о&nbsp;том, как появляются
+        <p class="demonstration__caption">По&nbsp;просьбам наших любимых фолловеров мы сняли для&nbsp;вас подробное
+          видео
+          о&nbsp;том, как появляются
           наши
           товары.</p>
-        <a href="#" class="btn">Сделать заказ</a>
+        <a href="#" class="btn demonstration__button">Сделать заказ</a>
       </section>
 
     </main>

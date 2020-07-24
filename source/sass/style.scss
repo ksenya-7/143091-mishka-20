@@ -1,6 +1,7 @@
 @import "variables.scss";
 // @import "mixins.scss";
 
+
 //vendor
 //--------------
 @import "vendor/normalize.scss";
@@ -18,9 +19,20 @@
 //blocks
 //--------------
 @import "blocks/btn.scss";
+@import "blocks/booking.scss";
 @import "blocks/entry.scss";
 @import "blocks/catalog.scss";
+@import "blocks/contacts.scss";
+@import "blocks/demonstration.scss";
 @import "blocks/featured.scss";
+@import "blocks/filter-radio.scss";
+@import "blocks/filter-checkbox.scss";
+@import "blocks/filter-username.scss";
+@import "blocks/filter-userphone.scss";
+@import "blocks/filter-usermail.scss";
+@import "blocks/filter-sundry.scss";
 @import "blocks/footer.scss";
 @import "blocks/intro.scss";
 @import "blocks/menu-nav.scss";
+@import "blocks/slider.scss";
+@import "blocks/underline.scss";

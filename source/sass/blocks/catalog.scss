@@ -49,6 +49,10 @@
   border: 1px solid $color-underline;
 }
 
+.catalog__picture {
+  background-image: $color-fonpicture;
+}
+
 .catalog__link {
   margin: 0;
   padding: 28px 0 0 28px;
@@ -65,7 +69,7 @@
   font-weight: normal;
   font-size: 13px;
   line-height: 30px;
-  color: $color-border;
+  color: $color-text;
 }
 
 .catalog__price {
