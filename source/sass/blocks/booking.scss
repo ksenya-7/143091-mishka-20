@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  width: 260px;
+  // width: 260px;
   height: auto;
 }
 
@@ -25,9 +25,28 @@
 }
 
 .booking__preface {
+  max-width: 260px;
+  margin: 0 auto;
+  margin-top: 17px;
+  padding: 0;
+
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
+
+  @include viewport--md {
+    max-width: 668px;
+    margin-top: 54px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @include viewport--lg {
+    max-width: 702px;
+    margin-top: 99px;
+    margin-left: 175px;
+  }
 }
 
 .booking__button {
@@ -37,6 +56,9 @@
 }
 
 .booking__form {
+  margin: 0 auto;
+  padding: 0;
+
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;

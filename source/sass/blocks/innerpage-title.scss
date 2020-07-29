@@ -1,0 +1,33 @@
+.innerpage-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 177px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 30px;
+
+  background-color: $color-underline;
+
+  @include viewport--md {
+    min-height: 238px;
+    padding-top: 27px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include viewport--lg {
+    min-height: 255px;
+    padding-top: 6px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

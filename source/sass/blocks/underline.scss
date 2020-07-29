@@ -8,7 +8,11 @@
   left: 0;
   top: 30px;
 
-  width: 93%;
+  width: 179px;
   height: 1px;
   background-color: $color-mail;
+
+  @include viewport--md {
+    width: 200px;
+  }
 }
