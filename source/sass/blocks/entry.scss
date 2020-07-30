@@ -1,49 +1,131 @@
 .entry {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-
-  width: 260px;
-  // min-height: 1452px;
+  margin: 31px 0 0 0;
 
   font-style: normal;
   font-weight: bold;
 
   color: $color-text;
+
+  @include viewport--md {
+    margin: 56px auto 0 auto;
+  }
+
+  @include viewport--lg {
+    margin: 68px auto 0 auto;
+  }
 }
 
 .entry__title {
   width: 260px;
-  margin: 31px 0 0 0;
+  margin: 0 auto;
   padding: 0;
 
-  tab-size: left;
+  font-weight: bold;
   font-size: 25px;
   line-height: 30px;
+
+  @include viewport--md {
+    width: 668px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include viewport--lg {
+    width: 700px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .entry__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-
-  margin: 0;
+  width: 260px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 
-
   font-size: 17px;
   line-height: 20px;
+
+  @include viewport--md {
+    width: 668px;
+    column-count: 2;
+    column-width: 344px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include viewport--lg {
+    column-width: 350px;
+  }
 }
 
 .entry__item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-
+  position: relative;
+  display: inline-block;
   width: 260px;
-  min-height: 118px;
+  min-height: 94px;
   margin: 0;
-  padding: 0;
+  margin-top: 29px;
+  padding-top: 54px;
+
+  @include viewport--md {
+    width: 330px;
+    min-height: 100px;
+    margin-top: 41px;
+    padding-top: 62px;
+  }
+
+  &--eco {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 32px;
+      height: 37px;
+      background-image: url("../img/icon-feature-flower.svg");
+    }
+  }
+
+  &--style {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &--like {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &--affection {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &--support {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &--pack {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+    }
+  }
 }

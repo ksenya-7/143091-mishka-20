@@ -18,6 +18,10 @@
   padding: 0;
 
   list-style: none;
+
+  @include viewport--md {
+    width: 501px;
+  }
 }
 
 .filter-username__item {

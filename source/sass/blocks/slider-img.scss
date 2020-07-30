@@ -1,0 +1,18 @@
+.slider-img {
+  background-image: none;
+
+  @include viewport--md {
+    width: 768px;
+    height: 457px;
+    margin: 83px auto 0;
+    padding-top: 78px;
+
+    background-image: url("./../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    // background-position: center;}
+  }
+
+  @include viewport--lg {
+    width: 1050px;
+  }
+}

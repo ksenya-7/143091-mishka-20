@@ -1,15 +1,21 @@
+// viewports
+//-----------
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1150px;
+$padding-min: 30px;
+$padding-max: 50px;
+
 //fonts
 //-----------
-$font-main: "Open Sans";
-$font-reserve: "Arial";
-$font-browser: sans-serif;
+$font-main: "Open Sans", "Arial", sans-serif;
 
 //colors
 //-----------
 $color-fonbasic: #ffffff;
 $color-fondecor: #f1f1f1;
 $color-underline: #ececec;
-$color-fonpicture: #e9e9e9;
+$color-fonpicture: #f9f9f9;
 $color-content: #444444;
 $color-text: #000000;
 $color-introtext: #010000;

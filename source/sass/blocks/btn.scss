@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
 
-  width: 259px;
+  width: $mobile-width - 2 * $padding-min;
   height: 52px;
   padding: 16px auto;
 
