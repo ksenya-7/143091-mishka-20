@@ -25,14 +25,14 @@
   line-height: 30px;
 
   @include viewport--md {
-    width: 346px;
+    width: 668px;
 
     font-size: 43px;
     line-height: 50px;
   }
 
   @include viewport--lg {
-    width: 417px;
+    width: 700px;
 
     font-size: 53px;
     line-height: 57px;
@@ -40,11 +40,8 @@
 }
 
 .entry__list {
-  display: grid;
-  grid-template-columns: 1fr 260px 1fr;
-  grid-template-rows: 123px 123px 123px 123px 123px 123px;
-  align-items: end;
-  margin: 0;
+  width: 260px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 
@@ -52,98 +49,83 @@
   line-height: 20px;
 
   @include viewport--md {
-    display: grid;
-    grid-template-columns: 1fr 334px 334px 1fr;
-    grid-template-rows: 155px 155px 155px;
-    align-items: end;
-    margin: 41px auto 0 auto;
+    width: 668px;
+    column-count: 2;
+    column-width: 344px;
 
     font-size: 20px;
     line-height: 22px;
   }
 
   @include viewport--lg {
-    grid-template-columns: 1fr 344px 304px 1fr;
-    grid-template-rows: 154px 154px 154px;
-    margin: 39px auto 0 175px;
+    column-width: 350px;
   }
 }
 
 .entry__item {
   position: relative;
+  display: inline-block;
   width: 260px;
+  min-height: 94px;
   margin: 0;
-  padding: 0;
+  margin-top: 29px;
+  padding-top: 54px;
 
   @include viewport--md {
     width: 330px;
+    min-height: 100px;
+    margin-top: 41px;
+    padding-top: 62px;
   }
 
   &--eco {
-    grid-row: 1/1;
-    grid-column: 2/2;
-
     &::before {
       content: "";
       position: absolute;
-      top: -56px;
+      top: 0;
       width: 32px;
       height: 37px;
       background-image: url("../img/icon-feature-flower.svg");
     }
-
-    @include viewport--md {
-      grid-row: 1/1;
-      grid-column: 2/2;
-    }
   }
 
   &--style {
-    grid-row: 2/2;
-    grid-column: 2/2;
-
-    @include viewport--md {
-      grid-row: 2/2;
-      grid-column: 2/2;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
     }
   }
 
   &--like {
-    grid-row: 3/3;
-    grid-column: 2/2;
-
-    @include viewport--md {
-      grid-row: 3/3;
-      grid-column: 2/2;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
     }
   }
 
   &--affection {
-    grid-row: 4/4;
-    grid-column: 2/2;
-
-    @include viewport--md {
-      grid-row: 1/1;
-      grid-column: 3/3;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
     }
   }
 
   &--support {
-    grid-row: 5/5;
-    grid-column: 2/2;
-
-    @include viewport--md {
-      grid-row: 2/2;
-      grid-column: 3/3;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
     }
   }
 
   &--pack {
-    grid-row: 6/6;
-    grid-column: 2/2;
-
-    @include viewport--md {
-      grid-area: 3/3/3/3;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
     }
   }
 }
