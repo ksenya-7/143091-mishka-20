@@ -6,7 +6,7 @@
 
   width: 260px;
   min-height: 655px;
-  // margin-top: 58px;
+  margin-top: 58px;
 
   &::after {
     content: "";
@@ -22,7 +22,6 @@
     background-size: cover;
 
     @include viewport--md {
-      // bottom: -58px;
       min-height: 17px;
     }
 
@@ -40,6 +39,7 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 768px;
+    margin-top: 0;
     min-height: 457px;
   }
 

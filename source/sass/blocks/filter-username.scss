@@ -1,45 +1,72 @@
 .filter-username {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  // min-height: auto;
-  margin: 32px 0 0 0;
+  width: 260px;
+  margin: 32px auto 0 auto;
   padding: 0;
+
+  @include viewport--md {
+    width: 668px;
+    margin: 50px auto 0 auto;
+  }
+
+  @include viewport--lg {
+    width: 811px;
+    margin: 50px 175px 0 64px;
+  }
 }
 
 .filter-username__list {
   display: flex;
   flex-direction: column;
 
-  width: 100%;
   margin: 0;
   padding: 0;
 
   list-style: none;
-
-  @include viewport--md {
-    width: 501px;
-  }
 }
 
 .filter-username__item {
   display: flex;
   flex-direction: column;
 
-  width: 100%;
+  width: 260px;
   min-height: 92px;
   margin: 0;
   padding: 0;
+
+  @include viewport--md {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 501px;
+    min-height: 52px;
+    margin-bottom: 41px;
+  }
+
+  @include viewport--lg {
+    width: 700px;
+  }
 }
 
 .filter-username__label {
   min-height: 25px;
   margin: 29px 0 0 0;
+
+  @include viewport--md {
+    // flex-grow: 0;
+    // width: auto;
+    margin: 0 25px 0 0;
+  }
 }
 
 .filter-username__input {
+  position: relative;
   min-height: 27px;
-  border-bottom: 2px solid $color-text;
+  border-bottom: 2px solid $color-content;
+
+  @include viewport--md {
+    flex-grow: 1;
+    min-height: 52px;
+    padding-left: 18px;
+  }
 }

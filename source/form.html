@@ -2,6 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: заказ по каталогу Мишка</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -137,69 +139,131 @@
 
     <h2 class="innerpage-title">Вязание на заказ</h2>
 
-    <div class="container">
+
       <main>
         <h1 class="visually-hidden">Магазин Мишка – вязание на заказ</h1>
         <div class="booking">
+          <div class="container">
           <p class="booking__preface">
             Мы будем рады воплотить в&nbsp;жизнь ваши&nbsp;пожелания! Заполните
             простую форму заказа и&nbsp;мы свяжемся с&nbsp;вами, чтобы уточнить
             детали.
           </p>
+        </div>
           <form
             class="booking__form"
             action="https://echo.htmlacademy.ru"
             method="get"
           >
-            <fieldset class="booking__fieldset filter-radio">
-              <legend class="booking__legend">Тип</legend>
+          <div class="container">
+            <div class="booking__fieldset filter-radio">
+              <div class="booking__legend">Тип</div>
               <ul class="booking__list filter-radio__list">
                 <li class="filter-radio__item">
                   <label class="filter-radio__label">
                     <input
-                      class="filter-radio__input"
+                      class="booking__input filter-radio__input"
                       type="radio"
                       name="descript"
                       value="accessory"
                       checked
                     />
-                    <span
-                      class="filter-radio__button filter-radio__button--circle"
-                    ></span>
-                    <span>Аксессуар для интерьера</span>
+                    <span>
+                      <svg
+                        class="filter-radio__button filter-radio__button--checked"
+                        width="54"
+                        height="55"
+                        viewBox="0 0 54 55"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M26.8841 2.98204C40.6271 2.98204 51.768 14.1228 51.768 27.8661C51.768 41.609 40.6271 52.7501 26.8841 52.7501C13.141 52.7501 2.00003 41.609 2.00003 27.8661C2.00003 14.1228 13.141 2.98204 26.8841 2.98204Z"
+                          stroke="#444444"
+                          stroke-width="2"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M26.8879 17.4737C32.6254 17.4737 37.2765 22.1246 37.2765 27.8619C37.2765 33.5993 32.6254 38.2503 26.8879 38.2503C21.1506 38.2503 16.4995 33.5993 16.4995 27.8619C16.4995 22.1246 21.1506 17.4737 26.8879 17.4737Z"
+                          fill="#62D1BA"
+                        />
+                      </svg>
+                    </span>
+                    <span class="filter-radio__scription"
+                      >Аксессуар для интерьера</span
+                    >
                   </label>
                 </li>
 
                 <li class="filter-radio__item">
                   <label class="filter-radio__label">
                     <input
-                      class="filter-radio__input"
+                      class="booking__input filter-radio__input"
                       type="radio"
                       name="descript"
                       value="toy"
                     />
-                    <span
-                      class="filter-radio__button filter-radio__button--circle"
-                    ></span>
-                    <span>Детская игрушка</span>
+                    <span>
+                      <svg
+                        class="filter-radio__button filter-radio__button--unchecked"
+                        width="52"
+                        height="53"
+                        viewBox="0 0 52 53"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M25.8841 1.98209C39.6271 1.98209 50.768 13.1228 50.768 26.866C50.768 40.609 39.6271 51.7501 25.8841 51.7501C12.141 51.7501 1.00003 40.609 1.00003 26.866C1.00003 13.1228 12.141 1.98209 25.8841 1.98209Z"
+                          stroke="#444444"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                    <span class="filter-radio__scription">Детская игрушка</span>
                   </label>
                 </li>
               </ul>
-            </fieldset>
+            </div>
+          </div>
 
-            <fieldset class="booking__fieldset filter-checkbox">
-              <legend class="booking__legend">Цвет</legend>
+
+              <div class="booking__fieldset filter-checkbox">
+              <div class="filter-checkbox__wrapper">
+              <div class="booking__legend">Цвет</div>
               <ul class="filter-checkbox__list">
                 <li class="filter-checkbox__item">
                   <label class="filter-checkbox__label">
                     <input
-                      class="filter-checkbox__input"
+                      class="booking__input filter-checkbox__input"
                       type="checkbox"
                       name="color"
                       value="white"
                       checked
                     />
-                    <span class="filter-checkbox__custombox"></span>
+                    <span>
+                      <svg
+                        class="filter-checkbox__custombox"
+                        width="54"
+                        height="52"
+                        viewBox="0 0 54 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="1"
+                          y="1"
+                          width="52"
+                          height="50"
+                          stroke="#444444"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M44 17.3568L42.5872 16L22.4037 35.2863L12.4128 25.6916L11 27.0485L20.9908 36.6432L22.4037 38L23.9174 36.6432L44 17.3568Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </span>
                     <span>Белый</span>
                   </label>
                 </li>
@@ -207,13 +271,35 @@
                 <li class="filter-checkbox__item">
                   <label class="filter-checkbox__label">
                     <input
-                      class="filter-checkbox__input"
+                      class="booking__input filter-checkbox__input"
                       type="checkbox"
                       name="color"
                       value="grey"
                       checked
                     />
-                    <span class="filter-checkbox__custombox"></span>
+                    <span>
+                      <svg
+                        class="filter-checkbox__custombox"
+                        width="54"
+                        height="52"
+                        viewBox="0 0 54 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="1"
+                          y="1"
+                          width="52"
+                          height="50"
+                          stroke="#444444"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M44 17.3568L42.5872 16L22.4037 35.2863L12.4128 25.6916L11 27.0485L20.9908 36.6432L22.4037 38L23.9174 36.6432L44 17.3568Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </span>
                     <span>Серый</span>
                   </label>
                 </li>
@@ -221,12 +307,30 @@
                 <li class="filter-checkbox__item">
                   <label class="filter-checkbox__label">
                     <input
-                      class="filter-checkbox__input"
+                      class="booking__input filter-checkbox__input"
                       type="checkbox"
                       name="color"
                       value="tiffany"
                     />
-                    <span class="filter-checkbox__custombox"></span>
+                    <span>
+                      <svg
+                        class="filter-checkbox__custombox"
+                        width="54"
+                        height="52"
+                        viewBox="0 0 54 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="1"
+                          y="1"
+                          width="52"
+                          height="50"
+                          stroke="#444444"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
                     <span>«Тиффани»</span>
                   </label>
                 </li>
@@ -234,12 +338,30 @@
                 <li class="filter-checkbox__item">
                   <label class="filter-checkbox__label">
                     <input
-                      class="filter-checkbox__input"
+                      class="booking__input filter-checkbox__input"
                       type="checkbox"
                       name="color"
                       value="black"
                     />
-                    <span class="filter-checkbox__custombox"></span>
+                    <span>
+                      <svg
+                        class="filter-checkbox__custombox"
+                        width="54"
+                        height="52"
+                        viewBox="0 0 54 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="1"
+                          y="1"
+                          width="52"
+                          height="50"
+                          stroke="#444444"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
                     <span>Черный</span>
                   </label>
                 </li>
@@ -247,12 +369,30 @@
                 <li class="filter-checkbox__item">
                   <label class="filter-checkbox__label">
                     <input
-                      class="filter-checkbox__input"
+                      class="booking__input filter-checkbox__input"
                       type="checkbox"
                       name="color"
                       value="pink"
                     />
-                    <span class="filter-checkbox__custombox"></span>
+                    <span>
+                      <svg
+                        class="filter-checkbox__custombox"
+                        width="54"
+                        height="52"
+                        viewBox="0 0 54 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="1"
+                          y="1"
+                          width="52"
+                          height="50"
+                          stroke="#444444"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
                     <span>Розовый</span>
                   </label>
                 </li>
@@ -260,21 +400,42 @@
                 <li class="filter-checkbox__item">
                   <label class="filter-checkbox__label">
                     <input
-                      class="filter-checkbox__input"
+                      class="booking__input filter-checkbox__input"
                       type="checkbox"
                       name="color"
                       value="orange"
                     />
-                    <span class="filter-checkbox__custombox"></span>
+                    <span>
+                      <svg
+                        class="filter-checkbox__custombox"
+                        width="54"
+                        height="52"
+                        viewBox="0 0 54 52"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="1"
+                          y="1"
+                          width="52"
+                          height="50"
+                          stroke="#444444"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
                     <span>Оранжевый</span>
                   </label>
                 </li>
               </ul>
-            </fieldset>
+            </div>
 
-            <fieldset class="booking__fieldset filter-username">
-              <legend class="booking__legend">ФИО</legend>
-              <ul class="filter-username__list">
+            </div>
+
+            <div class="container">
+              <div class="booking__fieldset filter-username">
+                <div class="booking__legend">ФИО</div>
+                <ul class="filter-username__list">
                 <li class="filter-username__item">
                   <label class="filter-username__label" for="name-user"
                     >Имя:</label
@@ -313,50 +474,67 @@
                     placeholder="Отчество, если желаете"
                   />
                 </li>
-              </ul>
-            </fieldset>
+                </ul>
+              </div>
+            </div>
 
-            <fieldset class="booking__fieldset filter-userphone">
-              <legend class="booking__legend">тел</legend>
-              <label class="filter-userphone__label">
-                <span class="visually-hidden">телефон</span>
-                <input
-                  class="booking__input filter-userphone__input"
-                  type="tel"
-                  name="tel-user"
-                  placeholder="+7 ХХХ ХХХ ХХ ХХ*"
-                />
-              </label>
-            </fieldset>
+            <div class="booking__fieldset filter-userphone">
+              <div class="filter-userphone__wrapper">
 
-            <fieldset class="booking__fieldset filter-usermail">
-              <legend class="booking__legend">E-mail</legend>
-              <label class="filter-usermail__label">
-                <span class="visually-hidden">email</span>
-                <input
-                  class="booking__input filter-usermail__input"
-                  type="email"
-                  name="mail-user"
-                  placeholder="Ваш Email*"
-                />
-              </label>
-            </fieldset>
+                <div class="booking__legend">тел</div>
+                <label class="filter-userphone__label">
+                  <span class="visually-hidden">телефон</span>
+                  <input
+                    class="booking__input filter-userphone__input"
+                    type="tel"
+                    name="tel-user"
+                    placeholder="+7 ХХХ ХХХ ХХ ХХ*"/>
+                </label>
+              </div>
+            </div>
 
-            <fieldset class="booking__fieldset filter-sundry">
-              <legend class="booking__legend">Доп</legend>
-              <label class="filter-sundry__label">
-                <span class="visually-hidden">комментарий</span>
-                <textarea
-                  class="filter-sundry__input"
-                  rows="6"
-                  placeholder="Опишите все ваши пожелания к заказу"
-                ></textarea>
-              </label>
-            </fieldset>
-            <p class="booking__comments">*Поля обязательны для заполнения</p>
-            <button class="btn booking__button" type="submit">
-              Отправить заказ
-            </button>
+
+              <div class="booking__fieldset filter-usermail">
+                <div class="filter-usermail__wrapper">
+
+                  <div class="booking__legend">E-mail
+                  </div>
+                  <label class="filter-usermail__label">
+                    <span class="visually-hidden">email</span>
+                    <input
+                    class="booking__input filter-usermail__input"
+                    type="email"
+                    name="mail-user"
+                    placeholder="Ваш Email*"
+                    />
+                  </label>
+                </div>
+
+              </div>
+
+
+            <div class="container">
+              <div class="booking__fieldset filter-sundry">
+                <div class="booking__legend">Доп</div>
+
+                  <label class="filter-sundry__label">
+                    <span class="visually-hidden">комментарий</span>
+                    <textarea
+                    class="filter-sundry__input"
+                    rows="6"
+                    placeholder="Опишите все ваши пожелания к заказу"
+                    ></textarea>
+                  </label>
+                  <div class="filter-sundry__bottom">
+                    <p class="booking__comments">*Поля обязательны для заполнения</p>
+                    <button class="btn booking__button" type="submit">
+                    Отправить заказ
+                    </button>
+                  </div>
+
+              </div>
+            </div>
+
           </form>
         </div>
       </main>

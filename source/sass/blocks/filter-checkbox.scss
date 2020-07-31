@@ -1,41 +1,127 @@
 .filter-checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 260px;
 
-  width: 100%;
-  // min-height: 171px;
-  margin: 30px 0 0 0;
+  margin: 30px auto 0 auto;
   padding: 0;
+
+  @include viewport--md {
+    width: 100%;
+    min-height: 304px;
+    margin: 50px auto 0 auto;
+    padding: 50px 0 26px 0;
+
+    background-color: $color-fondecor;
+  }
+
+  @include viewport--lg {
+    min-height: 228px;
+    margin: 50px auto 0 auto;
+  }
+}
+
+.filter-checkbox__wrapper {
+  @include viewport--md {
+    display: flex;
+    flex-direction: row;
+    width: 668px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @include viewport--lg {
+    width: 1050px;
+    padding-left: 60px;
+  }
 }
 
 .filter-checkbox__list {
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
+  justify-content: space-between;
 
   width: 100%;
-  // min-height: 360px;
-  margin: 24px 0 0 0;
+
+  margin: 25px 0 0 0;
   padding: 0;
 
   list-style: none;
 
   @include viewport--md {
-    width: 501px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    min-width: 501px;
+    width: 505px;
+    margin: 0;
+  }
+
+  @include viewport--lg {
+    width: 770px;
+    min-height: 150px;
   }
 }
 
 .filter-checkbox__item {
-  display: flex;
-  justify-content: space-between;
-
-  width: 100%;
-  min-height: 60px;
+  width: 260px;
+  min-height: 40px;
   margin: 0;
+  margin-bottom: 22px;
   padding: 0;
 
   @include viewport--md {
-    width: 435px;
+    width: 239px;
+    min-height: 52px;
+    margin-right: 23px;
+    margin-bottom: 24px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @include viewport--lg {
+    width: 239px;
+    min-height: 52px;
+    margin-right: 23px;
+
+    &:nth-child(2n) {
+      margin-right: 23px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.filter-checkbox__label {
+  display: flex;
+  align-items: center;
+  min-height: 39px;
+
+  @include viewport--md {
+    min-height: 52px;
+
+    font-size: 19px;
+    line-height: 18px;
+  }
+}
+
+.filter-checkbox__input {
+  position: absolute;
+  width: 40px;
+  height: 39px;
+}
+
+.filter-checkbox__custombox {
+  width: 40px;
+  height: 39px;
+  margin-right: 25px;
+
+  @include viewport--md {
+    width: 54px;
+    height: 52px;
+    margin-right: 28px;
   }
 }

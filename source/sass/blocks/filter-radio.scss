@@ -1,54 +1,84 @@
 .filter-radio {
-  outline: 2px solid green;
-  outline-offset: -2px;
-
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-
-  width: 100%;
-  // min-height: 171px;
-  margin: 29px 0 0 0;
+  width: 260px;
+  margin: 29px auto 0 auto;
   padding: 0;
 
   @include viewport--md {
-    // display: block;
-    width: 605px;
-    height: 131px;
+    width: 668px;
+  }
+
+  @include viewport--lg {
+    width: 811px;
+    margin: 29px 175px 0 64px;
   }
 }
 
 .filter-radio__list {
-  outline: 2px solid blue;
-  outline-offset: -2px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   width: 100%;
-  min-height: 60px;
+  min-height: 102px;
   margin: 24px 0 0 0;
   padding: 0;
 
   list-style: none;
 
   @include viewport--md {
-    width: 435px;
+    width: 505px;
     margin: 0;
+  }
+
+  @include viewport--lg {
+    width: 700px;
+  }
+}
+
+.filter-radio__item {
+  min-height: 42px;
+
+  &:first-child .filter-radio__scription {
+    padding-top: 10px;
+  }
+
+  @include viewport--md {
+    min-height: 55px;
   }
 }
 
 .filter-radio__label {
-  outline: 2px solid violet;
-  outline-offset: -2px;
+  display: flex;
+  align-items: center;
+  min-height: 47px;
 
   @include viewport--md {
+    min-height: 55px;
+
     font-size: 19px;
     line-height: 18px;
   }
 }
 
 .filter-radio__input {
-  outline: 2px solid purple;
-  outline-offset: -2px;
+  position: absolute;
+  width: 42px;
+  height: 42px;
+}
+
+.filter-radio__button {
+  max-width: 42px;
+  margin-right: 21px;
+
+  @include viewport--md {
+    max-width: 54px;
+  }
+}
+
+.filter-radio__scription {
+  max-width: 155px;
+
+  @include viewport--md {
+    max-width: 400px;
+  }
 }
