@@ -156,6 +156,21 @@
     }
   }
 
+  &--tablet {
+    display: none;
+
+    @include viewport--md {
+      display: flex;
+      align-items: flex-start;
+      width: 70%;
+      padding-top: 20px;
+
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+
   @include viewport--lg {
     width: 250px;
     margin-left: 14px;
@@ -164,20 +179,5 @@
       width: 84px;
       margin-left: 0;
     }
-  }
-}
-
-.menu-nav__help-item--tablet {
-  display: none;
-
-  @include viewport--md {
-    display: flex;
-    align-items: flex-start;
-    width: 60%;
-    padding-top: 20px;
-
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 24px;
   }
 }

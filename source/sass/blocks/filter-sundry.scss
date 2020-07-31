@@ -1,12 +1,34 @@
 .filter-sundry {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
+  width: 260px;
   min-height: 73px;
-  margin: 35px 0 0 0;
+  margin: 50px auto 0 auto;
   padding: 0;
+
+  @include viewport--md {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 668px;
+  }
+
+  @include viewport--lg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 811px;
+    min-height: 73px;
+    margin: 50px 175px 0 64px;
+  }
+}
+
+.filter-sundry__label {
+  @include viewport--md {
+    width: 500px;
+  }
+
+  @include viewport--lg {
+    width: 700px;
+  }
 }
 
 .filter-sundry__input {
@@ -15,5 +37,42 @@
   margin: 28px 0 0 0;
   padding: 17px 0 0 18px;
 
+  font-size: 17px;
+  line-height: 18px;
+  color: $color-input;
+
   border: 1px solid $color-text;
+
+  @include viewport--md {
+    width: 501px;
+    min-height: 142px;
+    margin: 0;
+
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  @include viewport--lg {
+    width: 700px;
+
+    color: $color-content;
+  }
+}
+
+.filter-sundry__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include viewport--md {
+    justify-content: space-between;
+    width: 668px;
+    margin: 53px 0 0 0;
+  }
+
+  @include viewport--lg {
+    justify-content: space-between;
+    width: 700px;
+    margin: 53px 0 0 auto;
+  }
 }

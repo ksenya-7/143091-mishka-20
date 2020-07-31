@@ -9,14 +9,15 @@
 //--------------
 @import "global/containers.scss";
 @import "global/fonts.scss";
+@import "global/btn.scss";
 @import "global/reboot.scss";
 @import "global/typography.scss";
 @import "global/utils.scss";
 
 //blocks
 //--------------
+
 @import "blocks/booking.scss";
-@import "blocks/btn.scss";
 @import "blocks/catalog.scss";
 @import "blocks/contacts.scss";
 @import "blocks/demonstration.scss";
