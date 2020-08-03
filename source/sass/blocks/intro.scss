@@ -1,22 +1,25 @@
 .intro {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 487px;
+  min-width: 320px;
+  min-height: 457px;
 
   font-style: normal;
   font-weight: bold;
 
   background-color: $color-fonpicture;
   background-image: url("../img/hero-mobile@1x.jpg");
-  background-position: bottom center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
 
   @include viewport--md {
-    min-height: 746px;
+    min-height: 758px;
+    max-height: 758px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: 1150px 750px;
@@ -32,7 +35,7 @@
   align-self: center;
   width: 260px;
   min-height: 90px;
-  margin: 72px auto 193px auto;
+  margin: 75px auto 120px auto;
   padding: 0;
 
   text-align: center;
@@ -58,10 +61,13 @@
 }
 
 .intro__list {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   width: 100%;
+  min-width: 320px;
+  min-height: 206px;
 
   margin: 0;
   padding: 0;
@@ -73,18 +79,77 @@
   @include viewport--md {
     flex-direction: row;
     justify-content: center;
+    min-height: 131px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 10;
+      top: 107px;
+      left: 50%;
+      height: 24px;
+      min-width: 770px;
+      width: 100%;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+
+      transform: translateX(-50%);
+    }
+  }
+
+  @include viewport--lg {
+    min-height: 136px;
+
+    &::after {
+      top: 102px;
+      min-width: 1250px;
+      max-width: 1250px;
+      height: 34px;
+
+      transform: translateX(-50%);
+    }
   }
 }
 
 .intro__item {
+  position: absolute;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
 
   width: 100%;
   min-height: 103px;
   margin: 0;
   padding: 0 0 0 30px;
+
+  & svg {
+    opacity: 0.5;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    opacity: 1;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+
+  &:nth-child(1n) {
+    left: 0;
+    top: 0;
+    background-color: $color-lightdecor;
+  }
+
+  &:nth-child(2n) {
+    left: 0;
+    top: 103px;
+    background-color: $color-darkdecor;
+  }
 
   @include viewport--md {
     width: 50%;
@@ -93,6 +158,16 @@
 
     font-size: 20px;
     line-height: 30px;
+
+    &:nth-child(1n) {
+      left: 0;
+      top: 0;
+    }
+
+    &:nth-child(2n) {
+      left: 50%;
+      top: 0;
+    }
   }
 
   @include viewport--lg {
@@ -102,18 +177,48 @@
     font-size: 20px;
     line-height: 30px;
   }
-}
 
-.intro__item:first-child {
-  background-color: $color-lightdecor;
-}
+  &:nth-child(1n):hover,
+  &:nth-child(1n):focus,
+  &:nth-child(1n):active {
+    top: -5px;
+    min-height: 108px;
+    padding-bottom: 5px;
+    background-color: $color-button1n;
 
-.intro__item:last-child {
-  background-color: $color-darkdecor;
+    @include viewport--md {
+      min-height: 124px;
+    }
+  }
+
+  &:nth-child(2n):hover,
+  &:nth-child(2n):focus,
+  &:nth-child(2n):active {
+    top: 98px;
+    min-height: 108px;
+    padding-bottom: 5px;
+    background-color: $color-tintmail;
+
+    @include viewport--md {
+      left: 50%;
+      top: -5px;
+      min-height: 124px;
+    }
+  }
 }
 
 .intro__link {
   width: 130px;
 
   color: $color-fonbasic;
+}
+
+.intro__icon {
+  &:nth-child(1n) {
+    margin-right: 36px;
+  }
+
+  &:nth-child(2n) {
+    margin-right: 27px;
+  }
 }

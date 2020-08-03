@@ -37,13 +37,23 @@
 }
 
 .catalog__item {
-  max-width: 260px;
+  width: 100%;
+  max-width: 400px;
   min-height: 374px;
   margin: 0;
   margin-top: 30px;
   padding: 0;
 
   border: 1px solid $color-underline;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px $color-line1;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px $color-line1;
+  }
 
   @include viewport--md {
     display: flex;
@@ -67,6 +77,9 @@
 
 .catalog__picture {
   background-image: $color-fonpicture;
+  width: 100%;
+  // min-width: 260px;
+  // max-width: 400px;
 
   @include viewport--md {
     width: 334px;
@@ -99,16 +112,32 @@
 }
 
 .catalog__link {
+  display: block;
   margin: 0;
-  padding: 28px 0 0 28px;
+  padding: 0;
 
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 24px;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 
-  @include viewport--md {
+  &:active {
+    opacity: 0.3;
+  }
+
+  & h3 {
+    max-width: 290px;
     margin: 0;
-    padding: 0;
+    padding: 28px 0 0 28px;
+
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 24px;
+
+    @include viewport--md {
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 
@@ -127,12 +156,57 @@
   }
 }
 
-.catalog__price {
-  margin: 0;
-  padding: 41px 0 27px 28px;
+.catalog__bottom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 25px;
+  margin: 40px 27px 27px 28px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -22px;
+    left: 0;
+    height: 1px;
+    min-width: 204px;
+    width: 100%;
+    max-width: 344px;
+    background-color: $color-underline;
+
+    @include viewport--md {
+      top: -22px;
+      width: 268px;
+    }
+
+    @include viewport--lg {
+      top: -22px;
+      width: 256px;
+    }
+  }
 
   @include viewport--md {
     margin: 0;
-    padding: 0;
   }
+}
+
+.catalog__price {
+  margin: 0;
+  padding: 0;
+
+  // @include viewport--md {
+  //   margin: 0;
+  //   padding: 0;
+  // }
+}
+
+.catalog__cart:hover svg,
+.catalog__cart:focus svg {
+  fill: $color-lightdecor;
+}
+
+.catalog__cart:active svg {
+  fill: $color-lightdecor;
+  opacity: 0.3;
 }
