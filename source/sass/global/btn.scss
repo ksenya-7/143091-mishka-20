@@ -15,4 +15,15 @@
 
   border: 2px solid $color-content;
   background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $color-fonbasic;
+    background: $color-content;
+    border: 2px solid $color-content;
+  }
+
+  &:active {
+    color: $color-fonbas3;
+  }
 }

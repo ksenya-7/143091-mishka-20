@@ -1,6 +1,7 @@
 .page-header {
   position: relative;
   min-height: 79px;
+  min-width: 320px;
 
   background-color: $color-fonbasic;
   box-shadow: 0 1px 0 $color-underline, inset 0 1px 0 $color-underline;
@@ -14,6 +15,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+
   padding-top: 22px;
   padding-bottom: 22px;
 
@@ -39,14 +41,25 @@
 
     transform: translateX(-50%);
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-header__toggle-btn {
   position: absolute;
-  top: 32px;
-  right: 31px;
+  top: 50%;
+  right: 25px;
   border: 0;
   background-color: transparent;
+
+  transform: translateY(-50%);
 
   @include viewport--md {
     display: none;
@@ -63,6 +76,20 @@
 
     span:nth-child(2) {
       display: block;
+      border: 0;
+      background-color: transparent;
     }
   }
+
+  &:hover,
+  &:focus {
+    // border: 0;
+    // background-color: transparent;
+    outline: none;
+  }
+
+  // &:active {
+  //   border: 0;
+  //   background-color: transparent;
+  // }
 }

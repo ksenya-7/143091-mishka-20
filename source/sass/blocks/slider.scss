@@ -18,8 +18,8 @@
 
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: bottom;
+    background-size: contain;
 
     @include viewport--md {
       min-height: 17px;
@@ -183,14 +183,26 @@
   background-position: center;
   border: none;
   background-color: transparent;
+  outline: none;
 
-  &--left {
-    background-image: url("./../img/icon-left-arrow.svg");
+  &:hover svg,
+  &:focus svg {
+    fill: $color-line6;
+    outline: none;
   }
 
-  &--right {
-    background-image: url("./../img/icon-right-arrow.svg");
+  &:active svg {
+    fill: $color-line3;
+    outline: none;
   }
+
+  // &--left {
+  //   background-image: url("../img/icon-left-arrow.svg");
+  // }
+
+  // &--right {
+  //   background-image: url("../img/icon-right-arrow.svg");
+  // }
 }
 
 .slider__button {

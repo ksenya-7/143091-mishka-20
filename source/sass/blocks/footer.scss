@@ -45,6 +45,15 @@
     width: 102px;
     height: 34px;
     margin: 0 75px 0 0;
+
+    &:hover svg,
+    &:focus svg {
+      fill: $color-tintmail;
+    }
+
+    &:active svg {
+      fill: $color-tint3mail;
+    }
   }
 }
 
@@ -61,6 +70,17 @@
   list-style: none;
 }
 
+.social-list__item {
+  &:hover svg,
+  &:focus svg {
+    fill: $color-tintmail;
+  }
+
+  &:active svg {
+    fill: $color-tint3mail;
+  }
+}
+
 .footer__copyright {
   display: flex;
   flex-wrap: wrap;
@@ -74,6 +94,15 @@
 .footer__logo-link {
   margin: 0 0 0 27px;
   padding: 0;
+
+  &:hover svg,
+  &:focus svg {
+    fill: $color-tintmail;
+  }
+
+  &:active svg {
+    fill: $color-tint3mail;
+  }
 }
 
 // .footer__logo-maker {

@@ -1,6 +1,6 @@
 .contacts {
   width: 100%;
-  // min-height: 700px;
+  min-width: 320px;
   margin-top: 38px;
   display: flex;
   flex-direction: column;
@@ -33,13 +33,13 @@
   @include viewport--md {
     display: grid;
     grid-template-columns: 1fr 50px 78px 255px 78px 257px 50px 1fr;
-    grid-template-rows: 128px 78px;
+    grid-template-rows: 99px 90px;
     width: 768px;
   }
 
   @include viewport--lg {
-    grid-template-columns: 50px 175px 78px 272px 525px 50px;
-    grid-template-rows: 79px 92px 91px 172px 52px;
+    grid-template-columns: 175px 78px 272px 527px;
+    grid-template-rows: 79px 92px 62px 172px 52px;
     width: 1050px;
     // align-items: end;
   }
@@ -68,7 +68,7 @@
 
   @include viewport--lg {
     grid-row: 2;
-    grid-column: 3/4;
+    grid-column: 2/3;
 
     font-size: 53px;
     line-height: 57px;
@@ -91,17 +91,29 @@
 
   @include viewport--lg {
     grid-row: 3;
-    grid-column: 3;
+    grid-column: 2;
   }
 }
 
 .contacts__emailvalue {
-  width: 183px;
+  display: flex;
+  align-items: center;
+  width: 169px;
+  height: 30px;
   margin: 0;
-  margin-right: 60px;
+  margin-right: 10px;
   padding: 0;
-  // grid-row: 2/2;
-  // grid-column: 4;
+
+  border-bottom: 1px solid $color-mail;
+
+  &:hover,
+  &:focus {
+    color: $color-tintmail;
+  }
+
+  &:active {
+    border-bottom: 1px solid $color-tint1mail;
+  }
 
   @include viewport--md {
     grid-row: 2;
@@ -110,7 +122,7 @@
 
   @include viewport--lg {
     grid-row: 3;
-    grid-column: 4;
+    grid-column: 3;
   }
 }
 
@@ -130,7 +142,7 @@
 
   @include viewport--lg {
     grid-row: 4;
-    grid-column: 3;
+    grid-column: 2;
     margin: 0;
   }
 }
@@ -152,25 +164,25 @@
   @include viewport--lg {
     margin: 0;
     grid-row: 4;
-    grid-column: 4;
+    grid-column: 3;
   }
 }
 
 .contacts__map {
   position: relative;
   width: 100%;
-  height: auto;
+  min-width: 320px;
+  height: 457px;
   margin-top: 33px;
 
   & img {
     width: 100%;
+    min-width: 320px;
+    height: 457px;
 
     @include viewport--lg {
-      // grid-row: 1/-1;
-      // grid-column: 5/7;
-      // width: 527px;
-      // height: 457px;
       display: none;
+      height: 0;
     }
   }
 
@@ -181,21 +193,19 @@
     left: 53.6%;
     width: 67px;
     height: 100px;
-    background-image: url("./../img/map-pin.svg");
+    background-image: url("../img/map-pin.svg");
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
     transform: translate(-50%);
 
-    @include viewport--md {
-      top: 30%;
-      left: 53.6%;
-      transform: translate(-50%, 100%);
-    }
+    // @include viewport--md {
+    //   top: 30%;
+    //   left: 53.6%;
+    //   transform: translate(-50%, 100%);
+    // }
 
     @include viewport--lg {
-      // top: 146px;
-      // left: 239px;
       display: none;
     }
   }
@@ -206,6 +216,7 @@
 
   @include viewport--lg {
     margin-top: 0;
+    height: 0;
   }
 }
 
@@ -213,13 +224,30 @@
   display: none;
 
   @include viewport--lg {
+    position: relative;
     display: block;
     grid-row: 1/-1;
-    grid-column: 5/7;
+    grid-column: 4;
     width: 527px;
     height: 457px;
 
     background-image: url("../img/map-desktop@1x.jpg");
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      z-index: 1;
+      top: 140px;
+      left: 230px;
+      width: 67px;
+      height: 100px;
+      background-image: url("../img/map-pin.svg");
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      // transform: translate(-50%);
+    }
   }
 }
 
@@ -231,8 +259,22 @@
   }
 
   @include viewport--lg {
+    display: none;
+  }
+}
+
+.contacts__button-reserve {
+  display: none;
+
+  @include viewport--md {
+    display: none;
+  }
+
+  @include viewport--lg {
+    display: flex;
     grid-row: 5;
-    grid-column: 3;
+    grid-column: 2;
     width: 230px;
+    margin: 0;
   }
 }

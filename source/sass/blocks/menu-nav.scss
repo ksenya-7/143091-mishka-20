@@ -36,6 +36,7 @@
 
   &--open {
     display: flex;
+    z-index: 1;
   }
 
   ul {
@@ -48,6 +49,7 @@
 
 .menu-nav__inner-list {
   @include viewport--md {
+    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     width: 48%;
@@ -74,6 +76,7 @@
   box-shadow: 0 1px 0 $color-underline, inset 0 1px 0 $color-underline;
 
   @include viewport--md {
+    z-index: 1;
     display: flex;
     align-items: flex-start;
     width: 150px;
@@ -129,10 +132,11 @@
 .menu-nav__help-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   min-height: 76px;
   margin: 0;
-  padding: 0 0 0 76px;
+  padding: 0 0 0 30px;
 
   box-shadow: 0 1px 0 $color-underline, inset 0 1px 0 $color-underline;
 
@@ -147,8 +151,11 @@
     padding-left: 0;
 
     &:first-child {
+      justify-content: center;
       width: 25%;
       margin-left: 0;
+      border-left: 1px solid $color-line1;
+      border-right: 1px solid $color-line1;
 
       span {
         font-size: 0;
@@ -160,6 +167,7 @@
     display: none;
 
     @include viewport--md {
+      z-index: 1;
       display: flex;
       align-items: flex-start;
       width: 70%;
@@ -168,6 +176,8 @@
       font-weight: normal;
       font-size: 15px;
       line-height: 24px;
+
+      box-shadow: none;
     }
   }
 
@@ -180,4 +190,69 @@
       margin-left: 0;
     }
   }
+}
+
+.menu-nav__help-item:nth-child(1) svg {
+  margin-right: 27px;
+  margin-left: 2px;
+
+  @include viewport--md {
+    margin-right: 0;
+  }
+}
+
+.menu-nav__help-item:nth-child(2) svg {
+  margin-right: 25px;
+
+  @include viewport--md {
+    margin-right: 30px;
+    flex-shrink: 0;
+  }
+}
+
+.menu-nav__help-item:nth-child(2) span {
+  min-width: 175px;
+  text-align: right;
+}
+
+.menu-nav__help-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 76px;
+  margin: 0;
+
+  @include viewport--md {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.menu-nav__link:hover,
+.menu-nav__link:focus,
+.menu-nav__help-link:hover,
+.menu-nav__help-link:focus {
+  color: $color-line6;
+}
+
+.menu-nav__link:active,
+.menu-nav__help-link:active {
+  color: $color-line3;
+}
+
+.menu-nav__help-link svg {
+  opacity: 0.2;
+}
+
+.menu-nav__help-link:hover svg,
+.menu-nav__help-link:focus svg {
+  fill: $color-lightdecor;
+  opacity: 1;
+}
+
+.menu-nav__help-link:active svg {
+  fill: $color-lightdecor;
+  opacity: 0.3;
 }
