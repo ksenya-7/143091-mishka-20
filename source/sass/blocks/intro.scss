@@ -126,6 +126,19 @@
   margin: 0;
   padding: 0 0 0 30px;
 
+  & svg {
+    opacity: 0.5;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    opacity: 1;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+
   &:nth-child(1n) {
     left: 0;
     top: 0;
@@ -165,20 +178,26 @@
     line-height: 30px;
   }
 
-  &:nth-child(1n):hover {
+  &:nth-child(1n):hover,
+  &:nth-child(1n):focus,
+  &:nth-child(1n):active {
     top: -5px;
     min-height: 108px;
     padding-bottom: 5px;
+    background-color: $color-button1n;
 
     @include viewport--md {
       min-height: 124px;
     }
   }
 
-  &:nth-child(2n):hover {
+  &:nth-child(2n):hover,
+  &:nth-child(2n):focus,
+  &:nth-child(2n):active {
     top: 98px;
     min-height: 108px;
     padding-bottom: 5px;
+    background-color: $color-tintmail;
 
     @include viewport--md {
       left: 50%;

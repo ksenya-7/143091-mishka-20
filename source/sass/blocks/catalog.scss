@@ -46,6 +46,15 @@
 
   border: 1px solid $color-underline;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px $color-line1;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px $color-line1;
+  }
+
   @include viewport--md {
     display: flex;
     max-width: 668px;
@@ -103,17 +112,32 @@
 }
 
 .catalog__link {
-  max-width: 290px;
+  display: block;
   margin: 0;
-  padding: 28px 0 0 28px;
+  padding: 0;
 
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 24px;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 
-  @include viewport--md {
+  &:active {
+    opacity: 0.3;
+  }
+
+  & h3 {
+    max-width: 290px;
     margin: 0;
-    padding: 0;
+    padding: 28px 0 0 28px;
+
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 24px;
+
+    @include viewport--md {
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 
