@@ -1,6 +1,6 @@
 .filter-username {
   width: 260px;
-  margin: 32px auto 0 auto;
+  margin: 8px auto 0 auto;
   padding: 0;
 
   @include viewport--md {
@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
 
-  margin: 0;
+  margin: 3px 0 0 0;
   padding: 0;
 
   list-style: none;
@@ -50,7 +50,7 @@
 
 .filter-username__label {
   min-height: 25px;
-  margin: 29px 0 0 0;
+  margin: 25px 0 0 0;
 
   @include viewport--md {
     // flex-grow: 0;
@@ -61,12 +61,27 @@
 
 .filter-username__input {
   position: relative;
-  min-height: 27px;
-  border-bottom: 2px solid $color-content;
+  min-height: 44px;
+
+  color: $color-cont3;
+
+  border: none;
+  box-shadow: inset 0 -2px 0 $color-content;
+  background-color: transparent;
 
   @include viewport--md {
     flex-grow: 1;
     min-height: 52px;
     padding-left: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 -2px 0 $color-mail;
+  }
+
+  &:active {
+    color: $color-content;
+    box-shadow: inset 0 -2px 0 $color-mail;
   }
 }

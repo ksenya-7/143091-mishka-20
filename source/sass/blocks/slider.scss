@@ -155,6 +155,10 @@
     width: 1px;
     min-height: 52px;
     background-color: $color-underline;
+
+    @include viewport--md {
+      width: 0;
+    }
   }
 
   @include viewport--md {
@@ -164,6 +168,8 @@
     height: 26px;
     margin: 0;
     padding: 0;
+
+    border: none;
   }
 
   @include viewport--lg {
@@ -184,6 +190,7 @@
   border: none;
   background-color: transparent;
   outline: none;
+  cursor: pointer;
 
   &:hover svg,
   &:focus svg {
