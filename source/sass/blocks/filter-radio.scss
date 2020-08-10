@@ -36,10 +36,16 @@
 }
 
 .filter-radio__item {
+  position: relative;
+  // display: flex;
   min-height: 42px;
 
   &:first-child .filter-radio__scription {
-    padding-top: 10px;
+    padding-top: 20px;
+
+    @include viewport--md {
+      padding-top: 0;
+    }
   }
 
   @include viewport--md {
@@ -48,12 +54,39 @@
 }
 
 .filter-radio__label {
+  position: relative;
   display: flex;
   align-items: center;
   min-height: 47px;
+  padding-left: 60px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+    background-color: $color-fonbasic;
+    box-shadow: 0 0 0 13px $color-fonbasic, 0 0 0 15px $color-content;
+
+    @include viewport--md {
+      left: 17px;
+      transform: translateY(-50%);
+      width: 21px;
+      height: 21px;
+
+      box-shadow: 0 0 0 15px $color-fonbasic, 0 0 0 17px $color-content;
+    }
+  }
 
   @include viewport--md {
     min-height: 55px;
+    padding-left: 75px;
 
     font-size: 19px;
     line-height: 18px;
@@ -62,16 +95,45 @@
 
 .filter-radio__input {
   position: absolute;
-  width: 42px;
-  height: 42px;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.filter-radio__button {
-  max-width: 42px;
-  margin-right: 21px;
+.filter-radio__input:checked + .filter-radio__label {
+  &::before {
+    background-color: $color-mail;
+  }
+}
 
-  @include viewport--md {
-    max-width: 54px;
+.filter-radio__input:disabled + .filter-radio__label {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.filter-radio__label:hover,
+.filter-radio__label:focus {
+  &::before {
+    box-shadow: 0 0 0 13px $color-fonbasic, 0 0 0 15px $color-mail;
+
+    @include viewport--md {
+      box-shadow: 0 0 0 15px $color-fonbasic, 0 0 0 17px $color-mail;
+    }
+  }
+}
+
+.filter-radio__label:active {
+  &::before {
+    box-shadow: 0 0 0 13px $color-fonbasic, 0 0 0 15px $color-cont3;
+
+    @include viewport--md {
+      box-shadow: 0 0 0 15px $color-fonbasic, 0 0 0 17px $color-cont3;
+    }
   }
 }
 

@@ -63,6 +63,7 @@
 }
 
 .filter-checkbox__item {
+  position: relative;
   width: 260px;
   min-height: 40px;
   margin: 0;
@@ -96,12 +97,56 @@
 }
 
 .filter-checkbox__label {
+  position: relative;
   display: flex;
   align-items: center;
   min-height: 39px;
+  padding-left: 62px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 39px;
+    height: 39px;
+
+    border: 2px solid $color-content;
+
+    @include viewport--md {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 40%;
+  //   left: 15px;
+  //   width: 11px;
+  //   height: 20px;
+  //   transform: translateY(-50%) skewX(6deg) rotate(48deg);
+
+  //   border-bottom: 1px solid $color-text;
+  //   border-right: 1px solid $color-text;
+
+  //   @include viewport--md {
+  //     left: 17px;
+  //     width: 17px;
+  //     height: 30px;
+  //     transform: translateY(-50%) skewX(-3deg) rotate(44deg);
+
+  //     border-bottom: 2px solid $color-text;
+  //     border-right: 2px solid $color-text;
+  //   }
+  // }
 
   @include viewport--md {
     min-height: 52px;
+    padding-left: 70px;
 
     font-size: 19px;
     line-height: 18px;
@@ -110,18 +155,55 @@
 
 .filter-checkbox__input {
   position: absolute;
-  width: 40px;
-  height: 39px;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.filter-checkbox__custombox {
-  width: 40px;
-  height: 39px;
-  margin-right: 25px;
+.filter-checkbox__input:checked + .filter-checkbox__label {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 15px;
+    width: 11px;
+    height: 20px;
+    transform: translateY(-50%) skewX(6deg) rotate(48deg);
 
-  @include viewport--md {
-    width: 54px;
-    height: 52px;
-    margin-right: 28px;
+    border-bottom: 1px solid $color-text;
+    border-right: 1px solid $color-text;
+
+    @include viewport--md {
+      left: 17px;
+      width: 17px;
+      height: 30px;
+      transform: translateY(-50%) skewX(-3deg) rotate(44deg);
+
+      border-bottom: 2px solid $color-text;
+      border-right: 2px solid $color-text;
+    }
+  }
+}
+
+.filter-checkbox__input:disabled + .filter-checkbox__label {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.filter-checkbox__label:hover,
+.filter-checkbox__label:focus {
+  &::before {
+    border: 2px solid $color-mail;
+  }
+}
+
+.filter-checkbox__label:active {
+  &::before {
+    border: 2px solid $color-cont3;
   }
 }
