@@ -12,6 +12,15 @@
 
   border: 1px solid $color-underline;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px $color-line1;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px $color-line1;
+  }
+
   @include viewport--md {
     max-width: 668px;
     min-height: 743px;
@@ -126,6 +135,8 @@
   background-color: transparent;
   border: none;
   outline: none;
+
+  cursor: pointer;
 
   &:hover,
   &:focus {

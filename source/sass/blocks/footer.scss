@@ -40,6 +40,10 @@
 .footer__logo {
   display: none;
 
+  &--no-pointer {
+    pointer-events: none;
+  }
+
   @media (min-width: $tablet-width) {
     display: block;
     width: 102px;

@@ -78,8 +78,6 @@
 .catalog__picture {
   background-image: $color-fonpicture;
   width: 100%;
-  // min-width: 260px;
-  // max-width: 400px;
 
   @include viewport--md {
     width: 334px;
