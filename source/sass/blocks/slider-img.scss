@@ -9,7 +9,10 @@
 
     background-image: url("./../img/review@1x.jpg");
     background-repeat: no-repeat;
-    // background-position: center;}
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   @include viewport--lg {

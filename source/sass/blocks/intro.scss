@@ -17,17 +17,29 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
+
   @include viewport--md {
     min-height: 758px;
     max-height: 758px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: 1150px 750px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
   }
 
   @include viewport--lg {
     background-image: url("../img/hero-desktop@1x.jpg");
     background-size: 1250px 763px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
   }
 }
 
