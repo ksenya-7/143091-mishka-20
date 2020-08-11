@@ -102,6 +102,10 @@
   background-position: center;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
+
   @include viewport--md {
     order: -1;
     width: 100%;
@@ -109,6 +113,10 @@
     margin: 0;
 
     background-image: url("../img/video-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
   }
 
   @include viewport--lg {
@@ -121,6 +129,10 @@
     margin: 0;
 
     background-image: url("../img/video-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
   }
 }
 
