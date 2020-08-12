@@ -14,8 +14,9 @@
   background-color: $color-fonpicture;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-position: top center;
+  background-position-y: -19px;
   background-repeat: no-repeat;
-  // background-size: cover;
+  // background-size: 100%;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
@@ -187,10 +188,14 @@
   &:hover svg,
   &:focus svg {
     opacity: 1;
+    transition: ease-in-out;
+    transition-duration: 0.2s;
   }
 
   &:active svg {
     opacity: 0.3;
+    transition: ease-in-out;
+    transition-duration: 0.2s;
   }
 
   @include viewport--md {
@@ -224,11 +229,11 @@
 .intro__item .intro__link:hover,
 .intro__item .intro__link:focus,
 .intro__item .intro__link:active {
-  min-height: 108px;
-  padding-bottom: 5px;
-  top: -5px;
+  // min-height: 108px;
 
   @include viewport--md {
+    padding-bottom: 5px;
+    top: -5px;
     min-height: 124px;
     transition: ease-in-out;
     transition-duration: 0.2s;
@@ -239,12 +244,16 @@
 .intro__item:nth-child(1n) .intro__link:focus,
 .intro__item:nth-child(1n) .intro__link:active {
   background-color: $color-button1n;
+  transition: ease-in-out;
+  transition-duration: 0.2s;
 }
 
 .intro__item:nth-child(2n) .intro__link:hover,
 .intro__item:nth-child(2n) .intro__link:focus,
 .intro__item:nth-child(2n) .intro__link:active {
   background-color: $color-tintmail;
+  transition: ease-in-out;
+  transition-duration: 0.2s;
 }
 
 .intro__article {
@@ -252,11 +261,13 @@
 }
 
 .intro__icon {
-  &:nth-of-type(1n) {
+  fill: $color-menu;
+
+  &--interior {
     margin-right: 36px;
   }
 
-  &:nth-of-type(2n) {
+  &--toy {
     margin-right: 27px;
   }
 }
