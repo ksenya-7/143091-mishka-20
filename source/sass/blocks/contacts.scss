@@ -8,13 +8,13 @@
   @include viewport--md {
     font-size: 17px;
     line-height: 30px;
-    margin-top: 133px;
+    margin-top: 46px;
   }
 
   @include viewport--lg {
     font-size: 17px;
     line-height: 30px;
-    margin-top: 161px;
+    margin-top: 71px;
   }
 }
 
@@ -213,7 +213,7 @@
   background-size: 100% 457px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/map-mobile@2x.jpg 2x");
+    background-image: url("../img/map-mobile@2x.jpg");
   }
 
   @include viewport--md {
@@ -221,7 +221,7 @@
     background-image: url("../img/map-tablet@1x.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/map-tablet@2x.jpg 2x");
+      background-image: url("../img/map-tablet@2x.jpg");
     }
   }
 
@@ -256,7 +256,7 @@
     background-size: contain;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/map-desktop@2x.jpg 2x");
+      background-image: url("../img/map-desktop@2x.jpg");
     }
   }
 }
