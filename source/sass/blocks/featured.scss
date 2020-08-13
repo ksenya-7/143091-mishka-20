@@ -1,10 +1,52 @@
 .featured {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 31px auto 0 auto;
+
+  @include viewport--md {
+    margin: 40px auto 0 auto;
+  }
+
+  @include viewport--lg {
+    margin: 54px auto 0 auto;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 6px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-color: transparent;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: contain;
+
+    @include viewport--md {
+      left: 50%;
+      min-height: 17px;
+
+      transform: translateX(-50%);
+    }
+
+    @include viewport--lg {
+      min-height: 23px;
+      max-width: 1050px;
+    }
+  }
+}
+
+.featured__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+
   min-height: 795px;
-  margin-top: 31px;
 
   font-style: normal;
   font-weight: normal;
@@ -12,51 +54,19 @@
   line-height: 24px;
   color: $color-text;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    min-height: 6px;
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-
-    @include viewport--md {
-      left: 50%;
-      min-height: 17px;
-      max-width: 668px;
-
-      transform: translateX(-50%);
-    }
-
-    @include viewport--lg {
-      // bottom: -123px;
-      // left: -124px;
-      // width: 1050px;
-      min-height: 23px;
-      max-width: 1050px;
-    }
-  }
-
   @include viewport--md {
     display: grid;
     grid-template-columns: 1fr 335px 207px 126px 1fr;
     grid-template-rows: 87px 125px 170px 57px 52px;
     align-items: start;
     min-height: 574px;
-    margin-top: 40px;
   }
 
   @include viewport--lg {
-    display: grid;
     grid-template-columns: 175px 350px 195px 330px;
     grid-template-rows: 63px 85px 138px 224px 57px 52px 96px;
-    align-items: start;
+
     min-height: 732px;
-    margin-top: 54px;
   }
 }
 

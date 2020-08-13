@@ -199,12 +199,18 @@
   // }
 }
 
-.catalog__cart:hover svg,
-.catalog__cart:focus svg {
-  fill: $color-lightdecor;
-}
+.catalog__cart {
+  svg {
+    fill: $color-line2;
+  }
 
-.catalog__cart:active svg {
-  fill: $color-lightdecor;
-  opacity: 0.3;
+  &:hover svg,
+  &:focus svg {
+    fill: $color-lightdecor;
+  }
+
+  &:active svg {
+    fill: $color-lightdecor;
+    opacity: 0.3;
+  }
 }

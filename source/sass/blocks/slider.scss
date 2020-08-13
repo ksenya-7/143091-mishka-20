@@ -1,4 +1,74 @@
 .slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 615px;
+  margin: 58px auto 0 auto;
+
+  // @include viewport--md {
+  //   margin: 40px auto 0 auto;
+  // }
+
+  // @include viewport--lg {
+  //   margin: 54px auto 0 auto;
+  // }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 6px;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-color: transparent;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: contain;
+
+    @include viewport--md {
+      left: 50%;
+      min-height: 17px;
+
+      transform: translateX(-50%);
+    }
+
+    @include viewport--lg {
+      // bottom: -123px;
+      // left: -124px;
+      width: 1050px;
+      min-height: 23px;
+    }
+  }
+}
+
+.slider__img {
+  background-image: none;
+
+  @include viewport--md {
+    width: 768px;
+    height: 457px;
+    margin: 83px auto 0;
+    padding-top: 78px;
+
+    background-image: url("./../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 350px 457px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
+  }
+
+  @include viewport--lg {
+    width: 1050px;
+  }
+}
+
+.slider__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,32 +76,6 @@
 
   width: 260px;
   min-height: 655px;
-  margin-top: 58px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    min-height: 6px;
-
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-
-    @include viewport--md {
-      min-height: 17px;
-    }
-
-    @include viewport--lg {
-      bottom: -123px;
-      left: -124px;
-      width: 1050px;
-      min-height: 23px;
-    }
-  }
 
   @include viewport--md {
     flex-direction: row;
@@ -40,7 +84,8 @@
     align-items: flex-start;
     width: 768px;
     margin-top: 0;
-    min-height: 457px;
+    min-height: 328px;
+    padding: 0 $padding-max;
   }
 
   @include viewport--lg {

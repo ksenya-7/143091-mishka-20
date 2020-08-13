@@ -31,10 +31,6 @@
     max-width: 1150px;
     padding: 0 $padding-max;
   }
-
-  // @include viewport--lg {
-  //   width: 1050px;
-  // }
 }
 
 .footer__logo {
@@ -50,9 +46,15 @@
     height: 34px;
     margin: 0 75px 0 0;
 
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
     &:hover svg,
     &:focus svg {
       fill: $color-tintmail;
+      outline: none;
     }
 
     &:active svg {
@@ -75,6 +77,10 @@
 }
 
 .social-list__item {
+  svg {
+    fill: $color-text;
+  }
+
   &:hover svg,
   &:focus svg {
     fill: $color-tintmail;
@@ -99,6 +105,10 @@
   margin: 0 0 0 27px;
   padding: 0;
 
+  svg {
+    fill: $color-lightdecor;
+  }
+
   &:hover svg,
   &:focus svg {
     fill: $color-tintmail;
@@ -108,9 +118,3 @@
     fill: $color-tint3mail;
   }
 }
-
-// .footer__logo-maker {
-//   width: 27px;
-//   height: 34px;
-//   fill: $color-lightdecor;
-// }
