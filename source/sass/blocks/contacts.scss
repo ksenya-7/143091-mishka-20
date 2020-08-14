@@ -45,8 +45,8 @@
     content: "";
     position: absolute;
     z-index: 10;
-    top: 375px;
-    left: 58%;
+    top: 415px;
+    left: 55%;
     width: 67px;
     height: 100px;
     background-image: url("../img/map-pin.svg");
@@ -117,6 +117,7 @@
 .contacts__mail {
   display: flex;
   width: 260px;
+  margin-top: 28px;
 
   @include viewport--md {
     width: 284px;
@@ -142,7 +143,7 @@
   display: flex;
   align-items: center;
 
-  height: 30px;
+  height: 27px;
   margin: 0;
   padding: 0;
 
@@ -162,6 +163,7 @@
   display: flex;
   align-items: flex-start;
   width: 260px;
+  margin: 30px 0 0 0;
 
   @include viewport--md {
     grid-row: 2;
@@ -177,7 +179,7 @@
 
 .contacts__adress {
   width: 56px;
-  margin: 33px 20px 0 0;
+  margin: 0 20px 0 0;
   padding: 0;
 
   @include viewport--md {
@@ -187,8 +189,7 @@
 
 .contacts__adressvalue {
   width: 183px;
-  margin: 33px 0 0 0;
-
+  margin: 0;
   padding: 0;
 
   @include viewport--md {
@@ -205,8 +206,8 @@
   position: relative;
   width: 100%;
   min-width: 320px;
-  height: 457px;
-  margin-top: 33px;
+  height: 455px;
+  margin-top: 31px;
 
   background-image: url("../img/map-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -262,7 +263,7 @@
 }
 
 .contacts__button {
-  margin: 39px auto 0 auto;
+  margin: 42px auto 0 auto;
 
   @include viewport--md {
     margin: 55px auto 0 auto;
@@ -287,4 +288,13 @@
     width: 230px;
     margin: 0;
   }
+}
+
+.yandex-map {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

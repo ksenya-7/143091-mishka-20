@@ -27,7 +27,7 @@
     background-color: transparent;
     background-repeat: repeat-x;
     background-position: bottom;
-    background-size: contain;
+    background-size: 100%;
 
     @include viewport--md {
       left: 50%;
@@ -75,7 +75,7 @@
   position: relative;
 
   width: 260px;
-  min-height: 655px;
+  min-height: 628px;
 
   @include viewport--md {
     flex-direction: row;
@@ -96,6 +96,7 @@
 }
 
 .slider__title {
+  width: 260px;
   margin: 0 auto;
   padding: 0;
 
@@ -119,7 +120,7 @@
 }
 
 .slider__list {
-  margin: 40px 0 0 0;
+  margin: 15px 0 0 0;
   padding: 0;
   list-style: none;
 
@@ -171,6 +172,9 @@
 }
 
 .slider__link {
+  display: block;
+  margin-top: 5px;
+
   font-weight: normal;
   line-height: 30px;
   color: $color-content;
@@ -187,7 +191,7 @@
 
   width: 100%;
   min-height: 52px;
-  margin: 33px 0 0 0;
+  margin: 26px 0 0 0;
   padding: 0;
 
   border: 1px solid $color-underline;
@@ -230,6 +234,8 @@
 
   width: 50%;
   min-height: 52px;
+  padding: 0;
+
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -258,7 +264,7 @@
 }
 
 .slider__button {
-  margin: 39px 0 0 0;
+  margin: 37px 0 0 0;
 
   @include viewport--md {
     order: -1;

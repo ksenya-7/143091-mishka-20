@@ -1,7 +1,7 @@
 .footer {
   background-color: $color-fondecor;
   width: 100%;
-  margin-top: 55px;
+  margin-top: 39px;
 
   @include viewport--md {
     margin-top: 50px;
@@ -94,15 +94,16 @@
 .footer__copyright {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 180px;
   min-height: 80px;
   margin: 0;
   padding: 0;
 }
 
 .footer__logo-link {
-  margin: 0 0 0 27px;
+  margin: 0;
   padding: 0;
 
   svg {

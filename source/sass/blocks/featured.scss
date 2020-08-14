@@ -25,7 +25,7 @@
     background-color: transparent;
     background-repeat: repeat-x;
     background-position: bottom;
-    background-size: contain;
+    background-size: 100%;
 
     @include viewport--md {
       left: 50%;
@@ -73,6 +73,7 @@
 .featured__title {
   width: 260px;
   margin: 0;
+  // margin-top: 2px;
   padding: 0;
 
   font-weight: bold;
@@ -102,7 +103,7 @@
 
 .featured__weekproduct {
   width: 260px;
-  margin: 3.5px 0 0 0;
+  margin: 5px 0 0 0;
   padding: 0;
 
   font-weight: bold;
@@ -131,7 +132,7 @@
 
 .featured__features {
   width: $mobile-width - 2 * $padding-min;
-  margin: 17.5px 0 0 0;
+  margin: 17px 0 0 0;
   padding: 0;
 
   @include viewport--md {
@@ -152,7 +153,8 @@
 }
 
 .featured__table {
-  margin: 21px 0 0 0;
+  width: 260px;
+  margin: 20px 0 0 0;
   padding: 0;
 
   line-height: 20px;
@@ -174,10 +176,14 @@
   }
 }
 
+.featured__row {
+  border-bottom: 1px solid $color-underline;
+}
+
 .featured__td1,
 .featured__td2 {
-  padding: 8px 0;
-  border-bottom: 1px solid $color-underline;
+  padding: 6px 0 11px;
+  background-color: transparent;
 }
 
 .featured__td1 {
@@ -191,7 +197,7 @@
 .featured__img {
   width: 260px;
   height: 315px;
-  margin-top: 28px;
+  margin-top: 26px;
 
   @include viewport--md {
     grid-row: 2/5;
@@ -242,7 +248,7 @@
 }
 
 .featured__button {
-  margin: 22px auto 0;
+  margin: 21px auto 0;
 
   @include viewport--md {
     grid-row: 5/5;

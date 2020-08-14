@@ -49,7 +49,7 @@
   align-self: center;
   width: 260px;
   min-height: 90px;
-  margin: 75px auto 120px auto;
+  margin: 72px auto 119px auto;
   padding: 0;
 
   text-align: center;
@@ -172,13 +172,13 @@
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 
   width: 100%;
   min-height: 103px;
   margin: 0;
-  padding: 0 0 0 30px;
+  padding: 25px 0 0 30px;
 
   color: $color-fonbasic;
 
@@ -265,10 +265,12 @@
   fill: $color-menu;
 
   &--interior {
+    margin-top: -2px;
     margin-right: 36px;
   }
 
   &--toy {
+    margin-top: -4px;
     margin-right: 27px;
   }
 }
