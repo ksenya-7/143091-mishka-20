@@ -37,7 +37,8 @@
 
   @include viewport--lg {
     background-image: url("../img/hero-desktop@1x.jpg");
-    background-size: 1250px 763px;
+    background-size: 1145px 751px;
+    background-position-y: -4px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
@@ -49,7 +50,7 @@
   align-self: center;
   width: 260px;
   min-height: 90px;
-  margin: 75px auto 120px auto;
+  margin: 73px auto 120px auto;
   padding: 0;
 
   text-align: center;
@@ -108,7 +109,7 @@
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: no-repeat;
       background-position: top center;
-      background-size: cover;
+      background-size: 100%;
 
       transform: translateX(-50%);
     }
@@ -118,7 +119,7 @@
     min-height: 136px;
 
     &::after {
-      top: 102px;
+      top: 101px;
       min-width: 1250px;
       max-width: 1250px;
       height: 34px;
@@ -172,13 +173,13 @@
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 
   width: 100%;
   min-height: 103px;
   margin: 0;
-  padding: 0 0 0 30px;
+  padding: 24px 0 0 30px;
 
   color: $color-fonbasic;
 
@@ -191,6 +192,7 @@
     opacity: 1;
     transition: ease-in-out;
     transition-duration: 0.2s;
+    outline: none;
   }
 
   &:active svg {
@@ -218,6 +220,10 @@
     }
   }
 
+  @include viewport--md {
+    padding: 26px 0 0 36px;
+  }
+
   @include viewport--lg {
     max-width: 525px;
     min-height: 120px;
@@ -230,7 +236,7 @@
 .intro__item .intro__link:hover,
 .intro__item .intro__link:focus,
 .intro__item .intro__link:active {
-  // min-height: 108px;
+  outline: none;
 
   @include viewport--md {
     padding-bottom: 5px;
@@ -247,6 +253,7 @@
   background-color: $color-button1n;
   transition: ease-in-out;
   transition-duration: 0.2s;
+  outline: none;
 }
 
 .intro__item:nth-child(2n) .intro__link:hover,
@@ -255,6 +262,7 @@
   background-color: $color-tintmail;
   transition: ease-in-out;
   transition-duration: 0.2s;
+  outline: none;
 }
 
 .intro__article {
@@ -265,10 +273,21 @@
   fill: $color-menu;
 
   &--interior {
+    margin-top: -2px;
     margin-right: 36px;
+
+    @include viewport--md {
+      margin-top: 4px;
+    }
   }
 
   &--toy {
+    margin-top: -4px;
     margin-right: 27px;
+
+    @include viewport--md {
+      margin-top: 6px;
+      margin-right: 34px;
+    }
   }
 }

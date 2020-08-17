@@ -1,14 +1,14 @@
 .filter-checkbox {
   width: 260px;
 
-  margin: 30px auto 0 auto;
+  margin: 27px auto 0 auto;
   padding: 0;
 
   @include viewport--md {
     width: 100%;
     min-height: 304px;
     margin: 50px auto 0 auto;
-    padding: 50px 0 26px 0;
+    padding: 46px 0 26px 0;
 
     background-color: $color-fondecor;
   }
@@ -16,6 +16,7 @@
   @include viewport--lg {
     min-height: 228px;
     margin: 50px auto 0 auto;
+    padding: 43px 0 26px 0;
   }
 }
 
@@ -30,7 +31,7 @@
 
   @include viewport--lg {
     width: 1050px;
-    padding-left: 60px;
+    padding-left: 64px;
   }
 }
 
@@ -53,7 +54,7 @@
     justify-content: flex-start;
     min-width: 501px;
     width: 505px;
-    margin: 0;
+    margin: 4px 0 0 0;
   }
 
   @include viewport--lg {
@@ -65,7 +66,6 @@
 .filter-checkbox__item {
   position: relative;
   width: 260px;
-  min-height: 40px;
   margin: 0;
   margin-bottom: 22px;
   padding: 0;
@@ -110,8 +110,8 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    width: 39px;
-    height: 39px;
+    width: 38px;
+    height: 38px;
 
     border: 2px solid $color-content;
 
@@ -146,7 +146,7 @@
 
   @include viewport--md {
     min-height: 52px;
-    padding-left: 70px;
+    padding-left: 80px;
 
     font-size: 19px;
     line-height: 18px;
@@ -170,7 +170,7 @@
     content: "";
     position: absolute;
     top: 40%;
-    left: 15px;
+    left: 13px;
     width: 11px;
     height: 20px;
     transform: translateY(-50%) skewX(6deg) rotate(48deg);
@@ -179,7 +179,7 @@
     border-right: 1px solid $color-text;
 
     @include viewport--md {
-      left: 17px;
+      left: 18px;
       width: 17px;
       height: 30px;
       transform: translateY(-50%) skewX(-3deg) rotate(44deg);
@@ -199,6 +199,7 @@
 .filter-checkbox__label:focus {
   &::before {
     border: 2px solid $color-mail;
+    outline: none;
   }
 }
 

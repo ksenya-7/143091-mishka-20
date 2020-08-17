@@ -1,4 +1,5 @@
 .innerpage-title {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -17,16 +18,34 @@
   background-color: $color-underline;
 
   @include viewport--md {
-    min-height: 238px;
-    padding-top: 27px;
+    min-height: 237px;
+    padding-top: 20px;
 
     font-size: 43px;
     line-height: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 10;
+      bottom: -1px;
+      left: 50%;
+      height: 24px;
+      min-width: 770px;
+      width: 100%;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 100%;
+
+      transform: translateX(-50%);
+    }
   }
 
   @include viewport--lg {
-    min-height: 255px;
-    padding-top: 6px;
+    min-height: 259px;
+    padding-top: 0;
 
     font-size: 53px;
     line-height: 57px;

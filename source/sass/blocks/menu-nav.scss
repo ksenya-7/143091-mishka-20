@@ -55,7 +55,7 @@
     width: 48%;
     min-height: 44px;
 
-    transform: translateY(113px);
+    transform: translateY(110px);
   }
 
   @include viewport--lg {
@@ -69,9 +69,9 @@
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 76px;
+  min-height: 79px;
   margin: 0;
-  padding: 0 0 0 76px;
+  padding: 4px 0 0 76px;
 
   box-shadow: 0 1px 0 $color-underline, inset 0 1px 0 $color-underline;
 
@@ -80,6 +80,8 @@
     display: flex;
     align-items: flex-start;
     width: 150px;
+    min-height: 89px;
+    max-height: 89px;
     margin: 0;
     margin-right: 20px;
     padding: 0;
@@ -134,9 +136,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 76px;
+  min-height: 79px;
   margin: 0;
-  padding: 0 0 0 30px;
+  padding: 3px 0 0 31px;
 
   box-shadow: 0 1px 0 $color-underline, inset 0 1px 0 $color-underline;
 
@@ -145,14 +147,14 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
-    width: 60%;
+    width: 76%;
     min-height: 89px;
-    margin-left: 13%;
-    padding-left: 0;
+    // margin-left: 7%;
+    padding: 0;
 
     &:first-child {
       justify-content: center;
-      width: 25%;
+      width: 24%;
       margin-left: 0;
       border-left: 1px solid $color-line1;
       border-right: 1px solid $color-line1;
@@ -182,8 +184,8 @@
   }
 
   @include viewport--lg {
-    width: 250px;
-    margin-left: 14px;
+    width: 264px;
+    // margin-left: 14px;
 
     &:first-child {
       width: 84px;
@@ -193,8 +195,8 @@
 }
 
 .menu-nav__help-item:nth-child(1) svg {
-  margin-right: 27px;
-  margin-left: 2px;
+  margin-right: 26px;
+  margin-left: 1px;
 
   @include viewport--md {
     margin-right: 0;
@@ -205,6 +207,7 @@
   margin-right: 25px;
 
   @include viewport--md {
+    margin-left: 30px;
     margin-right: 30px;
     flex-shrink: 0;
   }
@@ -235,6 +238,7 @@
 .menu-nav__help-link:hover,
 .menu-nav__help-link:focus {
   color: $color-line6;
+  outline: none;
 }
 
 .menu-nav__link:active,
@@ -250,6 +254,7 @@
 .menu-nav__help-link:focus svg {
   fill: $color-lightdecor;
   opacity: 1;
+  outline: none;
 }
 
 .menu-nav__help-link:active svg {

@@ -1,10 +1,15 @@
 .footer {
   background-color: $color-fondecor;
   width: 100%;
-  margin-top: 55px;
+  margin-top: 39px;
 
   @include viewport--md {
-    margin-top: 50px;
+    margin-top: 56px;
+    padding-bottom: 5px;
+  }
+
+  @include viewport--lg {
+    margin-top: 105px;
   }
 }
 
@@ -27,9 +32,10 @@
   @include viewport--md {
     flex-direction: row;
     justify-content: space-between;
+    min-height: 143px;
     width: auto;
     max-width: 1150px;
-    padding: 0 $padding-max;
+    padding: 0 $padding-max 7px;
   }
 }
 
@@ -44,7 +50,7 @@
     display: block;
     width: 102px;
     height: 34px;
-    margin: 0 75px 0 0;
+    margin: 0;
 
     &:hover,
     &:focus {
@@ -84,6 +90,7 @@
   &:hover svg,
   &:focus svg {
     fill: $color-tintmail;
+    outline: none;
   }
 
   &:active svg {
@@ -94,15 +101,19 @@
 .footer__copyright {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 180px;
   min-height: 80px;
   margin: 0;
   padding: 0;
+
+  // @include viewport--md {
+  // }
 }
 
 .footer__logo-link {
-  margin: 0 0 0 27px;
+  margin: 0;
   padding: 0;
 
   svg {
@@ -112,6 +123,7 @@
   &:hover svg,
   &:focus svg {
     fill: $color-tintmail;
+    outline: none;
   }
 
   &:active svg {

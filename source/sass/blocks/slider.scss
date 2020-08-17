@@ -6,13 +6,15 @@
   min-height: 615px;
   margin: 58px auto 0 auto;
 
-  // @include viewport--md {
-  //   margin: 40px auto 0 auto;
-  // }
+  @include viewport--md {
+    min-height: 541px;
+    margin: 65px auto 0 auto;
+  }
 
-  // @include viewport--lg {
-  //   margin: 54px auto 0 auto;
-  // }
+  @include viewport--lg {
+    min-height: 546px;
+    margin: 69px auto 0 auto;
+  }
 
   &::after {
     content: "";
@@ -51,7 +53,7 @@
   @include viewport--md {
     width: 768px;
     height: 457px;
-    margin: 83px auto 0;
+    margin: 0 auto;
     padding-top: 78px;
 
     background-image: url("./../img/review@1x.jpg");
@@ -75,7 +77,7 @@
   position: relative;
 
   width: 260px;
-  min-height: 655px;
+  min-height: 628px;
 
   @include viewport--md {
     flex-direction: row;
@@ -83,7 +85,7 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 768px;
-    margin-top: 0;
+    margin-top: 6px;
     min-height: 328px;
     padding: 0 $padding-max;
   }
@@ -92,10 +94,12 @@
     width: 976px;
     min-height: 283px;
     margin-left: 124px;
+    margin-top: 1px;
   }
 }
 
 .slider__title {
+  width: 260px;
   margin: 0 auto;
   padding: 0;
 
@@ -119,9 +123,13 @@
 }
 
 .slider__list {
-  margin: 40px 0 0 0;
+  margin: 14px 0 0 0;
   padding: 0;
   list-style: none;
+
+  @include viewport--md {
+    margin: 39px 0 0 0;
+  }
 
   @include viewport--lg {
     margin: 35px 0 0 0;
@@ -131,6 +139,10 @@
 .slider__item {
   margin: 0;
   padding: 0;
+
+  &--noactive {
+    display: none;
+  }
 
   @include viewport--md {
     width: 650px;
@@ -160,7 +172,7 @@
 
   @include viewport--md {
     width: 284px;
-    margin: 61px 0 0 0;
+    margin: 60px 0 0 0;
     font-size: 18px;
     line-height: 24px;
   }
@@ -171,6 +183,9 @@
 }
 
 .slider__link {
+  display: block;
+  margin-top: 5px;
+
   font-weight: normal;
   line-height: 30px;
   color: $color-content;
@@ -187,7 +202,7 @@
 
   width: 100%;
   min-height: 52px;
-  margin: 33px 0 0 0;
+  margin: 26px 0 0 0;
   padding: 0;
 
   border: 1px solid $color-underline;
@@ -207,9 +222,9 @@
   }
 
   @include viewport--md {
-    bottom: 80px;
-    left: 500px;
-    width: 137px;
+    bottom: 56px;
+    left: 493px;
+    width: 174px;
     height: 26px;
     margin: 0;
     padding: 0;
@@ -218,8 +233,8 @@
   }
 
   @include viewport--lg {
-    bottom: 55px;
-    left: 720px;
+    bottom: 57px;
+    left: 701px;
   }
 }
 
@@ -230,6 +245,8 @@
 
   width: 50%;
   min-height: 52px;
+  padding: 0;
+
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -258,11 +275,16 @@
 }
 
 .slider__button {
-  margin: 39px 0 0 0;
+  margin: 38px 0 0 0;
 
   @include viewport--md {
     order: -1;
-    margin: 0;
+    width: 175px;
+    margin: -5px 0 0;
     padding: 0;
+  }
+
+  @include viewport--lg {
+    margin: 0;
   }
 }

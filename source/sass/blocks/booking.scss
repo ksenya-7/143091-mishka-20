@@ -33,7 +33,7 @@
 
   @include viewport--md {
     max-width: 668px;
-    margin-top: 54px;
+    margin-top: 56px;
 
     font-size: 17px;
     line-height: 30px;
@@ -41,13 +41,13 @@
 
   @include viewport--lg {
     max-width: 702px;
-    margin-top: 99px;
+    margin-top: 111px;
     margin-left: 175px;
   }
 }
 
 .booking__button {
-  margin: 30px auto 5px auto;
+  margin: 30px auto 16px auto;
 
   line-height: 16px;
 
@@ -86,8 +86,8 @@
     content: "";
     position: absolute;
     top: 50%;
-    left: 62px;
-    width: 198px;
+    left: 60px;
+    width: 200px;
     height: 1px;
     background-color: $color-mail;
 
@@ -141,7 +141,7 @@
 }
 
 .booking__comments {
-  margin: 17px auto 0;
+  margin: 14px auto 0;
 
   font-weight: normal;
   font-size: 14px;
@@ -153,5 +153,7 @@
     margin: 0;
 
     text-align: end;
+    font-size: 17px;
+    line-height: 30px;
   }
 }

@@ -1,5 +1,5 @@
 .entry {
-  margin: 31px 0 0 0;
+  margin: 32px 0 0 0;
 
   font-style: normal;
   font-weight: bold;
@@ -7,7 +7,7 @@
   color: $color-text;
 
   @include viewport--md {
-    margin: 56px auto 0 auto;
+    margin: 58px auto 0 auto;
   }
 
   @include viewport--lg {
@@ -43,22 +43,25 @@
   width: 260px;
   margin: 0 auto;
   padding: 0;
+  // padding-top: 2px;
   list-style: none;
 
   font-size: 17px;
   line-height: 20px;
 
   @include viewport--md {
-    width: 668px;
     column-count: 2;
-    column-width: 344px;
+    column-gap: 0;
+    // column-fill: auto;
+    width: 668px;
+    margin-top: 10px;
 
     font-size: 20px;
     line-height: 22px;
   }
 
   @include viewport--lg {
-    column-width: 350px;
+    width: 700px;
   }
 }
 
@@ -76,12 +79,63 @@
   @include viewport--md {
     display: inline-block;
     width: 330px;
-    min-height: 100px;
-    margin-top: 41px;
+    min-height: 121px;
+    margin-top: 32px;
   }
 }
 
 .entry__icon {
-  padding-bottom: 20px;
+  padding-bottom: 16px;
   fill: $color-lightdecor;
+
+  &--eco {
+    margin-left: 8px;
+
+    @include viewport--md {
+      margin-left: 8px;
+      margin-top: -1px;
+      padding-bottom: 19px;
+    }
+  }
+
+  &--style {
+    @include viewport--md {
+      margin: 2px 1px;
+      padding-bottom: 25px;
+    }
+  }
+
+  &--like {
+    margin: 5px 7px;
+
+    @include viewport--md {
+      margin: 9px 8px;
+      padding-bottom: 14px;
+    }
+
+    @include viewport--lg {
+      padding-bottom: 11px;
+    }
+  }
+
+  &--affection {
+    margin: 2px 4px;
+  }
+
+  &--support {
+    margin: 3px -6px;
+
+    @include viewport--md {
+      margin: 5px -6px;
+      padding-bottom: 24px;
+    }
+  }
+
+  &--pack {
+    margin: 1px 3px;
+
+    @include viewport--md {
+      margin: 5px 3px;
+    }
+  }
 }
