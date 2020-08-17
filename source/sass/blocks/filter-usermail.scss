@@ -8,9 +8,11 @@
   margin: 33px auto 0 auto;
   padding: 0;
 
+  color: $color-cont3;
+
   @include viewport--md {
     margin: 0 auto;
-    padding: 24px 0 50px 0;
+    padding: 17px 0 50px 0;
 
     background-color: $color-fondecor;
   }
@@ -25,6 +27,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 668px;
+    min-height: 52px;
     margin: 0 auto;
     padding: 0;
   }
@@ -32,6 +35,40 @@
   @include viewport--lg {
     width: 811px;
     margin: 0 175px 0 64px;
+  }
+}
+
+.filter-usermail__legend {
+  position: relative;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #63d1bb;
+
+  @include viewport--md {
+    width: 68px;
+    margin-right: 100px;
+    padding-top: 20px;
+  }
+
+  @include viewport--lg {
+    width: 100px;
+    margin-right: 5px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 78px;
+    width: 182px;
+    height: 1px;
+    background-color: $color-mail;
+
+    @include viewport--md {
+      height: 0;
+    }
   }
 }
 
@@ -44,7 +81,7 @@
     align-items: center;
 
     width: 501px;
-    min-height: 52px;
+    min-height: 55px;
     margin: 0;
   }
 
@@ -55,8 +92,8 @@
 
 .filter-usermail__input {
   width: 260px;
-  min-height: 52px;
-  margin: 5px 0 0 0;
+  min-height: 56px;
+  margin: 0;
   padding: 0;
 
   color: $color-cont3;
@@ -68,6 +105,7 @@
     width: 501px;
     min-height: 52px;
     margin: 0;
+    padding: 0 0 9px 17px;
   }
 
   @include viewport--lg {
@@ -77,6 +115,7 @@
   &:hover,
   &:focus {
     box-shadow: inset 0 -2px 0 $color-mail;
+    outline: none;
   }
 
   &:active {
@@ -88,6 +127,7 @@
   &:focus ~ .filter-usermail__icon {
     fill: $color-mail;
     opacity: 1;
+    outline: none;
   }
 
   &:active ~ .filter-usermail__icon {
@@ -98,14 +138,20 @@
 
 .filter-usermail__icon {
   position: absolute;
-  top: -5px;
+  top: 0;
   right: 3px;
   width: 32px;
   height: 32px;
   opacity: 0.2;
+
   pointer-events: none;
 
   @include viewport--md {
-    top: 16px;
+    top: 13px;
+    right: 22px;
+  }
+
+  @include viewport--md {
+    right: 4px;
   }
 }

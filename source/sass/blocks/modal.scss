@@ -27,7 +27,10 @@
   align-items: center;
 
   width: 100%;
-  min-height: 100%;
+
+  @include viewport--md {
+    width: 566px;
+  }
 }
 
 .modal__overlay {
@@ -50,6 +53,7 @@
 
   width: 100%;
   min-width: 320px;
+  max-width: 320px;
   height: 336px;
   padding: 29px 30px 46px 30px;
 
@@ -62,6 +66,11 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 135px;
+  }
+
+  @include viewport--md {
+    width: 566px;
+    min-width: 566px;
   }
 }
 
@@ -76,6 +85,14 @@
 
   text-align: center;
   text-transform: uppercase;
+
+  @include viewport--md {
+    width: 381px;
+    margin: 7px 0 0 0;
+
+    font-size: 30px;
+    line-height: 57px;
+  }
 }
 
 .modal__text {
@@ -87,6 +104,11 @@
   line-height: 30px;
 
   text-align: center;
+
+  @include viewport--md {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .modal__list {
@@ -117,6 +139,10 @@
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+
+  &:checked + .modal__label {
+    border: 2px solid $color-lightdecor;
+  }
 }
 
 .modal__label {
@@ -129,8 +155,18 @@
 
   background: $color-fonbasic;
   mix-blend-mode: normal;
-  border: 2px solid $color-lightdecor;
+  border: 2px solid $color-line1;
   cursor: pointer;
+
+  @include viewport--md {
+    width: 112px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid $color-line3;
+    outline: none;
+  }
 }
 
 .modal__scription {
@@ -152,4 +188,8 @@
   color: $color-fonbasic;
   background-color: $color-lightdecor;
   border: none;
+
+  @include viewport--md {
+    width: 350px;
+  }
 }

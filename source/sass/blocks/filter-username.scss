@@ -1,11 +1,11 @@
 .filter-username {
   width: 260px;
-  margin: 8px auto 0 auto;
+  margin: 10px auto 0 auto;
   padding: 0;
 
   @include viewport--md {
     width: 668px;
-    margin: 50px auto 0 auto;
+    margin: 48px auto 0 auto;
   }
 
   @include viewport--lg {
@@ -18,10 +18,14 @@
   display: flex;
   flex-direction: column;
 
-  margin: 3px 0 0 0;
+  margin: 4px 0 0 0;
   padding: 0;
 
   list-style: none;
+
+  @include viewport--md {
+    margin: 2px 0 0 0;
+  }
 }
 
 .filter-username__item {
@@ -39,8 +43,8 @@
     align-items: center;
     justify-content: space-between;
     width: 501px;
-    min-height: 52px;
-    margin-bottom: 41px;
+    min-height: 53px;
+    margin-bottom: 23px;
   }
 
   @include viewport--lg {
@@ -53,15 +57,13 @@
   margin: 25px 0 0 0;
 
   @include viewport--md {
-    // flex-grow: 0;
-    // width: auto;
-    margin: 0 25px 0 0;
+    margin: 0 33px 0 0;
   }
 }
 
 .filter-username__input {
   position: relative;
-  min-height: 44px;
+  min-height: 43px;
 
   color: $color-cont3;
 
@@ -71,13 +73,14 @@
 
   @include viewport--md {
     flex-grow: 1;
-    min-height: 52px;
+    min-height: 51px;
     padding-left: 18px;
   }
 
   &:hover,
   &:focus {
     box-shadow: inset 0 -2px 0 $color-mail;
+    outline: none;
   }
 
   &:active {

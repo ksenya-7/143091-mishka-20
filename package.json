@@ -32,7 +32,7 @@
     "styles": "gulp styles",
     "scripts": "gulp scripts",
     "build": "gulp build",
-    "start": "gulp"
+    "start": "gulp start"
   },
   "browserslist": [
     "last 2 versions",

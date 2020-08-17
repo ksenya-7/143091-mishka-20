@@ -16,7 +16,7 @@
   justify-content: center;
   width: 100%;
 
-  padding-top: 20px;
+  padding-top: 22px;
   padding-bottom: 20px;
   cursor: pointer;
 
@@ -30,7 +30,7 @@
     left: 0;
 
     justify-content: flex-start;
-    width: 50%;
+    width: 48%;
     padding-top: 22px;
     padding-bottom: 21px;
     padding-left: 48px;
@@ -41,6 +41,7 @@
     justify-content: center;
 
     width: auto;
+    height: auto;
     padding-top: 9px;
     padding-bottom: 7px;
     padding-left: 0;
@@ -48,14 +49,15 @@
     transform: translateX(-50%);
 
     & picture {
-      width: 103px;
-      height: 34px;
+      width: 149px;
+      height: 72px;
     }
   }
 
   &:hover,
   &:focus {
     opacity: 0.6;
+    outline: none;
   }
 
   &:active {
@@ -81,7 +83,7 @@
 
 .page-header__toggle-btn {
   position: absolute;
-  top: 47%;
+  top: 39px;
   right: 25px;
   border: 0;
   background-color: transparent;
@@ -115,8 +117,6 @@
 
   &:hover,
   &:focus {
-    // border: 0;
-    // background-color: transparent;
     outline: none;
   }
 
