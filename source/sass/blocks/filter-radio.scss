@@ -109,14 +109,38 @@
   pointer-events: none;
 }
 
-.filter-radio__label:hover,
-.filter-radio__label:focus {
+.filter-radio__label:hover {
   &::before {
     box-shadow: 0 0 0 13px $color-fonbasic, 0 0 0 15px $color-mail;
     outline: none;
 
     @include viewport--md {
       box-shadow: 0 0 0 15px $color-fonbasic, 0 0 0 17px $color-mail;
+      outline: none;
+    }
+  }
+}
+
+.filter-radio__input:focus + .filter-radio__label {
+  &::before {
+    box-shadow: 0 0 0 13px $color-fonbasic, 0 0 0 15px $color-mail;
+    outline: none;
+
+    @include viewport--md {
+      box-shadow: 0 0 0 15px $color-fonbasic, 0 0 0 17px $color-mail;
+      outline: none;
+    }
+  }
+}
+
+.filter-radio__input:checked:focus + .filter-radio__label {
+  &::before {
+    box-shadow: 0 0 0 13px $color-fonbasic, 0 0 0 15px $color-mail;
+    outline: none;
+
+    @include viewport--md {
+      box-shadow: 0 0 0 15px $color-fonbasic, 0 0 0 17px $color-mail;
+      outline: none;
     }
   }
 }

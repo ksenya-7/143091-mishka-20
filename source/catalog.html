@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: каталог Мишка</title>
+    <link
+      rel="preload"
+      href="fonts/opensans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/opensansbold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
 
@@ -343,7 +357,7 @@
 
       <div class="container">
         <section class="demonstration">
-          <div class="demonstration__caption">
+          <div class="demonstration__caption demonstration__caption--mobile">
             <svg width="32" height="22">
               <use xlink:href="#icon-video"></use>
             </svg>
@@ -361,13 +375,20 @@
               </svg>
             </button>
           </div>
+          <div class="demonstration__hover">
+            <div class="demonstration__caption demonstration__caption--tablet">
+              <svg width="32" height="22">
+                <use xlink:href="#icon-video"></use>
+              </svg>
+              <h2 class="demonstration__title">Процесс производства</h2>
+            </div>
+            <p class="demonstration__text">
+              По&nbsp;просьбам наших любимых фолловеров мы сняли для&nbsp;вас
+              подробное видео о&nbsp;том, как появляются наши товары.
+            </p>
 
-          <p class="demonstration__text">
-            По&nbsp;просьбам наших любимых фолловеров мы сняли для&nbsp;вас
-            подробное видео о&nbsp;том, как появляются наши товары.
-          </p>
-
-          <a href="#" class="btn demonstration__button">Сделать заказ</a>
+            <a href="#" class="btn demonstration__button">Сделать заказ</a>
+          </div>
         </section>
       </div>
     </main>
@@ -409,7 +430,7 @@
           <a
             class="footer__logo-link"
             href="https://htmlacademy.ru/intensive/adaptive"
-            aria-label="переход на страницу курса HTMLacademy: Профессиональная вёрстка сайтов"
+            aria-label="переход на лендинг интенсива «Профессиональный HTML и CSS, уровень 2"
           >
             <svg width="27" height="34">
               <use xlink:href="#htmlacademy"></use>

@@ -1,8 +1,9 @@
 .intro {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   min-width: 320px;
@@ -23,6 +24,9 @@
   }
 
   @include viewport--md {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     min-height: 758px;
     max-height: 758px;
 
@@ -50,8 +54,8 @@
   align-self: center;
   width: 260px;
   min-height: 90px;
-  margin: 73px auto 120px auto;
-  padding: 0;
+  margin: 73px auto 0 auto;
+  padding: 0 0 120px 0;
 
   text-align: center;
   font-size: 27px;
@@ -60,7 +64,8 @@
 
   @include viewport--md {
     width: 668px;
-    margin: 155px auto 372px auto;
+    margin: 154px auto 0 auto;
+    // padding: 0 0 371px 0;
 
     font-size: 43px;
     line-height: 50px;
@@ -68,7 +73,8 @@
 
   @include viewport--lg {
     width: 700px;
-    margin: 157px auto 355px auto;
+    margin: 157px auto 0 auto;
+    // padding: 0 0 225px 0;
 
     font-size: 53px;
     line-height: 57px;
@@ -76,15 +82,13 @@
 }
 
 .intro__list {
-  position: relative;
+  bottom: 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  // align-items: flex-start;
   width: 100%;
   min-width: 320px;
-  min-height: 206px;
-
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   list-style: none;
@@ -93,14 +97,16 @@
 
   @include viewport--md {
     flex-direction: row;
-    justify-content: center;
-    min-height: 131px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    min-width: 668px;
+    max-width: calc(100% - 100px);
 
     &::after {
       content: "";
       position: absolute;
       z-index: 10;
-      top: 107px;
+      bottom: -1px;
       left: 50%;
       height: 24px;
       min-width: 770px;
@@ -109,68 +115,54 @@
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: no-repeat;
       background-position: top center;
-      background-size: 100%;
+      background-size: 770px 24px;
 
       transform: translateX(-50%);
     }
   }
 
   @include viewport--lg {
-    min-height: 136px;
+    min-width: 1050px;
+    max-width: 1050px;
 
     &::after {
-      top: 101px;
-      min-width: 1250px;
-      max-width: 1250px;
+      bottom: 0;
+      min-width: 1050px;
+      width: 1050px;
+      // max-width: 1250px;
       height: 34px;
+      background-size: 119%;
 
-      transform: translateX(-50%);
+      // transform: translateX(-50%);
     }
   }
 }
 
 .intro__item {
-  position: absolute;
-  left: 0;
+  display: flex;
   width: 100%;
 
   &:nth-child(1n) {
-    top: 0;
-
     & .intro__link {
       background-color: $color-lightdecor;
     }
   }
 
   &:nth-child(2n) {
-    top: 103px;
-
     & .intro__link {
       background-color: $color-darkdecor;
     }
   }
 
   @include viewport--md {
-    min-height: 119px;
     margin: 0 auto;
 
     font-size: 20px;
     line-height: 30px;
-
-    &:nth-child(1n) {
-      left: 0;
-      top: 0;
-    }
-
-    &:nth-child(2n) {
-      left: 50%;
-      top: 0;
-    }
   }
 }
 
 .intro__link {
-  position: absolute;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -179,11 +171,11 @@
   width: 100%;
   min-height: 103px;
   margin: 0;
-  padding: 24px 0 0 30px;
+  padding: 24px 0 19px 30px;
 
   color: $color-fonbasic;
 
-  & svg {
+  svg {
     opacity: 0.5;
   }
 
@@ -202,31 +194,27 @@
   }
 
   @include viewport--md {
-    width: 50%;
-    min-height: 119px;
+    width: 100%;
+    min-height: 131px;
     margin: 0 auto;
+    padding: 26px 0 15px 36px;
 
     font-size: 20px;
     line-height: 30px;
 
-    &:nth-of-type(1n) {
-      left: 0;
-      top: 0;
+    &:hover {
+      transform: translateY(-5px);
+      padding: 26px 0 20px 36px;
     }
 
-    &:nth-of-type(2n) {
-      left: 50%;
-      top: 0;
+    &:hover .intro__title {
+      margin: 154px auto 236px auto;
     }
-  }
-
-  @include viewport--md {
-    padding: 26px 0 0 36px;
   }
 
   @include viewport--lg {
     max-width: 525px;
-    min-height: 120px;
+    min-height: 136px;
 
     font-size: 20px;
     line-height: 30px;
@@ -239,9 +227,6 @@
   outline: none;
 
   @include viewport--md {
-    padding-bottom: 5px;
-    top: -5px;
-    min-height: 124px;
     transition: ease-in-out;
     transition-duration: 0.2s;
   }

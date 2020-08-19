@@ -13,6 +13,7 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const del = require("del");
 const posthtml = require("gulp-posthtml");
+const htmlmin = require("gulp-htmlmin");
 const include = require("posthtml-include");
 
 // Clean
@@ -79,6 +80,7 @@ const html = () => {
   return gulp
     .src("source/*.html")
     .pipe(posthtml([include()]))
+    .pipe(htmlmin())
     .pipe(gulp.dest("build/"))
     .pipe(sync.stream());
 };
@@ -93,7 +95,7 @@ const images = () => {
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
-        imagemin.mozjpeg({ quality: 85, progressive: true }),
+        imagemin.mozjpeg({ quality: 90, progressive: true }),
         imagemin.optipng({ optimizationLevel: 3 }),
         imagemin.svgo({
           plugins: [
@@ -154,7 +156,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/*.html", gulp.series(html)).on("change", sync.reload);
-  gulp.watch("source/*.js", gulp.series(scripts)).on("change", sync.reload);
+  gulp.watch("source/js/*.js", gulp.series(scripts)).on("change", sync.reload);
 };
 
 // Build

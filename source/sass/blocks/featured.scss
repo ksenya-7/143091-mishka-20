@@ -10,7 +10,7 @@
   }
 
   @include viewport--lg {
-    margin: 54px auto 0 auto;
+    margin: 50px auto 0 auto;
   }
 
   &::after {
@@ -32,6 +32,7 @@
       min-height: 17px;
 
       transform: translateX(-50%);
+      // background-size: 100%;
     }
 
     @include viewport--lg {
@@ -56,17 +57,32 @@
 
   @include viewport--md {
     display: grid;
-    grid-template-columns: 1fr 335px 207px 126px 1fr;
-    grid-template-rows: 87px 130px 180px 56px 52px;
+    grid-template:
+      "a a b"
+      "d c c"
+      "e c c"
+      "f c c"
+      "h c c"
+      /335px 207px 126px;
     align-items: start;
-    min-height: 573px;
+    min-height: 504px;
+    margin-bottom: 69px;
   }
 
   @include viewport--lg {
-    grid-template-columns: 175px 350px 195px 330px;
-    grid-template-rows: 65px 93px 144px 230px 57px 52px 96px;
+    // grid-template-columns: 175px 350px 195px 330px;
+    // grid-template-rows: 65px 93px 144px 230px 57px 52px 96px;
 
-    min-height: 732px;
+    grid-template:
+      "a b c c"
+      "a d c c"
+      "a e c c"
+      "a f c c"
+      "a h c c"
+      /175px 350px 195px 330px;
+
+    min-height: 636px;
+    margin-bottom: 96px;
   }
 }
 
@@ -82,9 +98,10 @@
   color: $color-text;
 
   @include viewport--md {
-    grid-row: 1/1;
-    grid-column: 2/3;
+    grid-area: a;
     width: 450px;
+    margin: 0;
+    padding: 0 0 37px 0;
 
     font-size: 43px;
     line-height: 50px;
@@ -92,9 +109,10 @@
 
   @include viewport--lg {
     order: 1;
-    grid-row: 2/2;
-    grid-column: 2/3;
+    grid-area: b;
     width: 545px;
+    margin-top: 65px;
+    padding: 0 0 36px 0;
 
     font-size: 53px;
     line-height: 57px;
@@ -114,9 +132,7 @@
   color: $color-lightdecor;
 
   @include viewport--md {
-    grid-row: 1/1;
-    grid-column: 4/4;
-    height: 34px;
+    grid-area: b;
     width: 126px;
 
     font-size: 17px;
@@ -125,9 +141,8 @@
   }
 
   @include viewport--lg {
-    grid-row: 2/2;
-    grid-column: 1/1;
-    margin: 8px 0 0 19px;
+    grid-area: a;
+    margin: 73px 0 0 19px;
   }
 }
 
@@ -137,19 +152,18 @@
   padding: 0;
 
   @include viewport--md {
-    grid-row: 2/2;
-    grid-column: 2/2;
+    grid-area: d;
     width: 292px;
     margin: 0;
-    padding: 0;
+    padding: 0 0 40px 0;
 
     font-size: 17px;
     line-height: 30px;
   }
 
   @include viewport--lg {
-    grid-row: 3/3;
-    grid-column: 2/2;
+    grid-area: d;
+    padding: 0 0 54px 0;
   }
 }
 
@@ -162,25 +176,20 @@
   border-collapse: collapse;
 
   @include viewport--md {
-    grid-row: 3/3;
-    grid-column: 2/2;
+    grid-area: e;
     width: 292px;
-    height: 90px;
-    margin: 0;
+    margin: 0 0 60px 0;
+    // padding: 0 0 10px 0;
 
     font-size: 17px;
     line-height: 30px;
   }
 
   @include viewport--lg {
-    grid-row: 4/4;
-    grid-column: 2/2;
+    grid-area: e;
     width: 292px;
   }
 }
-
-// .featured__row {
-// }
 
 .featured__td1,
 .featured__td2 {
@@ -219,8 +228,7 @@
   margin-top: 29px;
 
   @include viewport--md {
-    grid-row: 2/5;
-    grid-column: 3/5;
+    grid-area: c;
 
     width: 333px;
     height: 404px;
@@ -228,8 +236,7 @@
   }
 
   @include viewport--lg {
-    grid-row: 1/-1;
-    grid-column: 3/-1;
+    grid-area: c;
 
     width: 525px;
     height: 636px;
@@ -238,10 +245,12 @@
 
   img {
     width: 100%;
+    loading: lazy;
   }
 }
 
 .featured__price {
+  max-width: 260px;
   margin: 27px auto 0;
   padding: 0;
 
@@ -251,34 +260,35 @@
   line-height: 24px;
 
   @include viewport--md {
-    grid-row: 4/4;
-    grid-column: 2/2;
+    grid-area: f;
     width: 292px;
+    max-width: 292px;
     margin: 0;
-    padding: 0;
+    padding: 0 0 32px 0;
 
     font-size: 20px;
     line-height: 24px;
   }
 
   @include viewport--lg {
-    grid-row: 5/5;
-    grid-column: 2/2;
+    grid-area: f;
+    margin: 0;
+    padding: 0 0 33px 0;
   }
 }
 
 .featured__button {
-  margin: 24px auto 0;
+  margin: 24px auto 20px;
+  padding: 4px;
 
   @include viewport--md {
-    grid-row: 5/5;
-    grid-column: 2/2;
+    grid-area: h;
     width: 292px;
     margin: 0;
   }
 
   @include viewport--lg {
-    grid-row: 6/6;
-    grid-column: 2/2;
+    grid-area: h;
+    margin: 0;
   }
 }

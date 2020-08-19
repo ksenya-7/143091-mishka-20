@@ -53,8 +53,8 @@
 
   width: 100%;
   min-width: 320px;
-  max-width: 320px;
-  height: 336px;
+  max-width: 400px;
+  min-height: 336px;
   padding: 29px 30px 46px 30px;
 
   background-color: $color-fonbasic;
@@ -78,6 +78,7 @@
   width: 176px;
   margin: 0;
   padding: 0;
+  padding-bottom: 7px;
 
   font-weight: bold;
   font-size: 25px;
@@ -89,6 +90,7 @@
   @include viewport--md {
     width: 381px;
     margin: 7px 0 0 0;
+    padding-bottom: 10px;
 
     font-size: 30px;
     line-height: 57px;
@@ -98,6 +100,7 @@
 .modal__text {
   margin: 0;
   padding: 0;
+  padding-bottom: 10px;
 
   font-weight: normal;
   font-size: 15px;
@@ -113,11 +116,23 @@
 
 .modal__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
 
   margin: 0;
   padding: 0;
   list-style: none;
+
+  li:nth-of-type(3n) {
+    margin: 0 0 15px 0;
+  }
+
+  @include viewport--md {
+    li:nth-of-type(4n) {
+      margin: 0 0 20px 0;
+    }
+  }
 }
 
 .modal__item {
@@ -125,8 +140,12 @@
   align-items: center;
   justify-content: center;
 
-  margin: 0;
+  margin: 0 5px 15px 0;
   padding: 0;
+
+  @include viewport--md {
+    margin: 0 8px 20px 0;
+  }
 }
 
 .modal__input {
@@ -140,8 +159,9 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 
-  &:checked + .modal__label {
-    border: 2px solid $color-lightdecor;
+  &:focus + .modal__label {
+    border: 2px solid $color-line3;
+    outline: none;
   }
 }
 
@@ -151,7 +171,7 @@
   align-items: center;
   justify-content: center;
   width: 82px;
-  height: 52px;
+  min-height: 52px;
 
   background: $color-fonbasic;
   mix-blend-mode: normal;
@@ -162,11 +182,14 @@
     width: 112px;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     border: 2px solid $color-line3;
     outline: none;
   }
+}
+
+.modal__input:checked + .modal__label {
+  border: 2px solid $color-lightdecor;
 }
 
 .modal__scription {
@@ -179,7 +202,8 @@
 
 .modal__button {
   width: 260px;
-  height: 52px;
+  margin: 0 auto;
+  padding-bottom: 5px;
 
   font-weight: bold;
   font-size: 17px;

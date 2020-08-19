@@ -31,6 +31,7 @@
 
   @include viewport--lg {
     flex-direction: row;
+    align-items: stretch;
     width: 1050px;
     margin: 123px 0 0 0;
   }
@@ -58,6 +59,11 @@
     }
   }
 
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
   &:hover .catalog__textblock,
   &:focus .catalog__textblock {
     box-shadow: 0 6px 10px $color-line1;
@@ -70,6 +76,7 @@
 
   @include viewport--md {
     display: flex;
+    // align-items: stretch;
     max-width: 668px;
     min-height: 334px;
     margin-top: 54px;
@@ -91,11 +98,12 @@
 .catalog__picture {
   background-image: $color-fonpicture;
   width: 100%;
-  height: 195px;
+  height: auto;
 
   @include viewport--md {
     width: 334px;
-    height: 334px;
+    height: 100%;
+    // height: 334px;
   }
 
   @include viewport--lg {
@@ -107,12 +115,17 @@
 .catalog__textblock {
   position: relative;
 
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
   @include viewport--md {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 334px;
-    height: 334px;
+    min-height: 334px;
     padding: 27px 32px 25px 34px;
   }
 
@@ -120,7 +133,7 @@
     display: flex;
     flex-direction: column;
     width: 316px;
-    height: 197px;
+    min-height: 197px;
     padding: 27px 28px;
   }
 
@@ -140,7 +153,7 @@
     }
 
     @include viewport--lg {
-      top: -22px;
+      bottom: 73px;
       width: 256px;
     }
   }
@@ -169,7 +182,7 @@
   & h3 {
     max-width: 290px;
     margin: 0;
-    padding: 26px 0 0 28px;
+    padding: 26px 28px 0 28px;
 
     font-weight: bold;
     font-size: 17px;
@@ -187,7 +200,7 @@
 
 .catalog__description {
   margin: 0;
-  padding: 4px 0 0 28px;
+  padding: 4px 28px 0 28px;
 
   font-weight: normal;
   font-size: 13px;
@@ -229,8 +242,16 @@
 }
 
 .catalog__cart {
+  flex-shrink: 0;
+  margin-left: 20px;
+
   svg {
     fill: $color-line2;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
   }
 
   &:hover svg,

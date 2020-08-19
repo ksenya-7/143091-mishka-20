@@ -121,29 +121,6 @@
     }
   }
 
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 40%;
-  //   left: 15px;
-  //   width: 11px;
-  //   height: 20px;
-  //   transform: translateY(-50%) skewX(6deg) rotate(48deg);
-
-  //   border-bottom: 1px solid $color-text;
-  //   border-right: 1px solid $color-text;
-
-  //   @include viewport--md {
-  //     left: 17px;
-  //     width: 17px;
-  //     height: 30px;
-  //     transform: translateY(-50%) skewX(-3deg) rotate(44deg);
-
-  //     border-bottom: 2px solid $color-text;
-  //     border-right: 2px solid $color-text;
-  //   }
-  // }
-
   @include viewport--md {
     min-height: 52px;
     padding-left: 80px;
@@ -195,8 +172,21 @@
   pointer-events: none;
 }
 
-.filter-checkbox__label:hover,
-.filter-checkbox__label:focus {
+.filter-checkbox__label:hover {
+  &::before {
+    border: 2px solid $color-mail;
+    outline: none;
+  }
+}
+
+.filter-checkbox__input:focus + .filter-checkbox__label {
+  &::before {
+    border: 2px solid $color-mail;
+    outline: none;
+  }
+}
+
+.filter-checkbox__input:checked:focus + .filter-checkbox__label {
   &::before {
     border: 2px solid $color-mail;
     outline: none;

@@ -4,12 +4,13 @@
   justify-content: center;
 
   width: $mobile-width - 2 * $padding-min;
-  height: 52px;
+  min-height: 52px;
   padding-top: 4px;
 
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
   color: $color-content;
 

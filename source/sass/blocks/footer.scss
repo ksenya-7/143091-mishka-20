@@ -74,7 +74,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 141px;
+  min-width: 141px;
   min-height: 80px;
   margin: 0;
   padding: 0;
@@ -82,9 +82,27 @@
   list-style: none;
 }
 
+.social-list {
+  li {
+    margin-right: 15px;
+  }
+
+  li:last-of-type {
+    margin-right: 0;
+  }
+}
+
 .social-list__item {
+  margin: 0;
+  padding: 0;
+
   svg {
     fill: $color-text;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
   }
 
   &:hover svg,
@@ -118,6 +136,11 @@
 
   svg {
     fill: $color-lightdecor;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
   }
 
   &:hover svg,

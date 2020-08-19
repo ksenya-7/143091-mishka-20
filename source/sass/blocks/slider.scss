@@ -1,6 +1,7 @@
 .slider {
   position: relative;
   display: flex;
+  // flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   min-height: 615px;
@@ -52,7 +53,7 @@
 
   @include viewport--md {
     width: 768px;
-    height: 457px;
+    min-height: 457px;
     margin: 0 auto;
     padding-top: 78px;
 
@@ -225,7 +226,7 @@
     bottom: 56px;
     left: 493px;
     width: 174px;
-    height: 26px;
+    min-height: 26px;
     margin: 0;
     padding: 0;
 
@@ -275,7 +276,7 @@
 }
 
 .slider__button {
-  margin: 38px 0 0 0;
+  margin: 38px 0 20px 0;
 
   @include viewport--md {
     order: -1;

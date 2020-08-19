@@ -5,34 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Мишка</title>
+    <link
+      rel="preload"
+      href="fonts/opensans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/opensansbold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
-
-    <!-- Pixel Glass -->
-    <!-- <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        /* Mobile layout by default */
-        background-image: url("img/index_320.png");
-      }
-      /* Tablet */
-      @media (min-width: 768px) {
-        HTML {
-          /* Tablet layout */
-          background-image: url("img/index_Tablet.png");
-        }
-      }
-      /* Desktop */
-      @media (min-width: 1050px) {
-        HTML {
-          /* Desktop layout */
-          background-image: url("img/index_Desktop.png");
-        }
-      }
-    </style>
-    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet" />
-    <script src="../node_modules/pixel-glass/script.js"></script> -->
-    <!-- // Pixel Glass -->
   </head>
 
   <body>
@@ -147,14 +134,18 @@
       </div>
     </header>
 
-    <section class="intro">
-      <div class="container container--no-padding">
+    <main>
+      <h1 class="visually-hidden">
+        Магазин Мишка – вязанные товары ручной работы
+      </h1>
+
+      <section class="intro">
         <h2 class="intro__title">
           Милые штуки ручной работы&nbsp;для&nbsp;дома
         </h2>
         <ul class="intro__list">
           <li class="intro__item">
-            <a class="intro__link" href="catalog.ru"
+            <a class="intro__link" href="catalog.html"
               ><span class="intro__article">Предметы интерьера</span>
               <span class="intro__icon intro__icon--interior">
                 <svg width="40" height="62">
@@ -164,7 +155,7 @@
             </a>
           </li>
           <li class="intro__item">
-            <a class="intro__link" href="catalog.ru"
+            <a class="intro__link" href="catalog.html"
               ><span class="intro__article">Детские игрушки</span>
               <span class="intro__icon intro__icon--toy">
                 <svg width="60" height="60">
@@ -174,13 +165,7 @@
             </a>
           </li>
         </ul>
-      </div>
-    </section>
-
-    <main>
-      <h1 class="visually-hidden">
-        Магазин Мишка – вязанные товары ручной работы
-      </h1>
+      </section>
 
       <section class="featured">
         <div class="featured__content">
@@ -403,8 +388,8 @@
         </div>
       </section>
 
-      <section class="contacts">
-        <div class="container">
+      <section class="contacts-wrapper">
+        <div class="contacts">
           <div class="contacts__content">
             <span class="contacts__icon">
               <svg width="47" height="82">
@@ -427,29 +412,19 @@
                 д.&nbsp;19/8,&nbsp;офис 101
               </span>
             </div>
-            <a
-              class="btn contacts__button-reserve"
-              href="form-callback.html"
-              aria-label="открытие модального окна обратной связи"
-              >Напишите нам</a
-            >
-
-            <div class="contacts__map-reserve">
-              <div class="contacts__reserve-yandex" id="map"></div>
-              <div class="contacts__reserve-img"></div>
-            </div>
           </div>
+          <div class="contacts__map">
+            <div class="contacts__map-yandex" id="map"></div>
+            <div class="contacts__map-img"></div>
+          </div>
+
+          <a
+            class="btn contacts__button"
+            href="form-callback.html"
+            aria-label="открытие модального окна обратной связи"
+            >Напишите нам</a
+          >
         </div>
-        <div class="contacts__map">
-          <div class="contacts__yandex-map" id="map-reserve"></div>
-          <div class="contacts__map-img"></div>
-        </div>
-        <a
-          class="btn contacts__button"
-          href="form-callback.html"
-          aria-label="открытие модального окна обратной связи"
-          >Напишите нам</a
-        >
       </section>
     </main>
 
@@ -493,7 +468,7 @@
           <a
             class="footer__logo-link"
             href="https://htmlacademy.ru/intensive/adaptive"
-            aria-label="переход на страницу курса HTMLacademy: Профессиональная вёрстка сайтов"
+            aria-label="переход на лендинг интенсива «Профессиональный HTML и CSS, уровень 2"
           >
             <svg width="27" height="34">
               <use xlink:href="#htmlacademy"></use>
