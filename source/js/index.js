@@ -3,6 +3,7 @@ var navToggle = document.querySelector(".page-header__toggle-btn");
 
 if (nav) {
   nav.classList.remove("menu-nav--no-js");
+  navToggle.classList.remove("visually-hidden");
 
   navToggle.addEventListener("click", function (e) {
     e.preventDefault();

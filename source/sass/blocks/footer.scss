@@ -1,7 +1,9 @@
 .footer {
-  background-color: $color-fondecor;
+  position: relative;
   width: 100%;
   margin-top: 39px;
+
+  background-color: $color-fondecor;
 
   @include viewport--md {
     margin-top: 56px;
@@ -10,6 +12,23 @@
 
   @include viewport--lg {
     margin-top: 105px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 79px;
+    height: 1px;
+    width: calc(100% - 60px);
+
+    transform: translateX(-50%);
+    background-color: $color-footerline;
+
+    @include viewport--md {
+      display: none;
+    }
   }
 }
 
@@ -82,40 +101,6 @@
   list-style: none;
 }
 
-.social-list {
-  li {
-    margin-right: 15px;
-  }
-
-  li:last-of-type {
-    margin-right: 0;
-  }
-}
-
-.social-list__item {
-  margin: 0;
-  padding: 0;
-
-  svg {
-    fill: $color-text;
-  }
-
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-
-  &:hover svg,
-  &:focus svg {
-    fill: $color-tintmail;
-    outline: none;
-  }
-
-  &:active svg {
-    fill: $color-tint3mail;
-  }
-}
-
 .footer__copyright {
   display: flex;
   flex-wrap: wrap;
@@ -125,9 +110,6 @@
   min-height: 80px;
   margin: 0;
   padding: 0;
-
-  // @include viewport--md {
-  // }
 }
 
 .footer__logo-link {

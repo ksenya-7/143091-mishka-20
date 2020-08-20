@@ -48,6 +48,8 @@
 }
 
 .menu-nav__inner-list {
+  position: relative;
+
   @include viewport--md {
     z-index: 1;
     display: flex;
@@ -62,6 +64,17 @@
     width: 40%;
 
     transform: translateY(0);
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 184px;
+      width: 1px;
+      height: 88px;
+      background-color: $color-line1;
+    }
   }
 }
 

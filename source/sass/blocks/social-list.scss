@@ -1,0 +1,33 @@
+.social-list {
+  li {
+    margin-right: 15px;
+  }
+
+  li:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.social-list__item {
+  margin: 0;
+  padding: 0;
+
+  svg {
+    fill: $color-text;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $color-tintmail;
+    outline: none;
+  }
+
+  &:active svg {
+    fill: $color-tint3mail;
+  }
+}

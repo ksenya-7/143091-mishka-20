@@ -190,6 +190,10 @@
     @include viewport--md {
       width: 204px;
     }
+
+    @include viewport--md {
+      bottom: -4px;
+    }
   }
 
   &:hover,

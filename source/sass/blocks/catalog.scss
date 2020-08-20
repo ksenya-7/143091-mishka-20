@@ -46,6 +46,7 @@
   padding: 0;
 
   border: 1px solid $color-underline;
+  box-sizing: border-box;
 
   &:last-child .catalog__link {
     margin-top: -2px;
@@ -127,7 +128,7 @@
     justify-content: space-between;
     width: 334px;
     min-height: 334px;
-    padding: 27px 32px 25px 34px;
+    padding: 27px 32px 26px 34px;
   }
 
   @include viewport--lg {
@@ -186,7 +187,7 @@
   font-weight: normal;
   font-size: 13px;
   line-height: 30px;
-  color: $color-text;
+  color: $color-content;
 
   @include viewport--md {
     margin: 6px 0 auto 0;
