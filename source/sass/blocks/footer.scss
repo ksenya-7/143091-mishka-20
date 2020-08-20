@@ -13,23 +13,6 @@
   @include viewport--lg {
     margin-top: 105px;
   }
-
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    bottom: 79px;
-    height: 1px;
-    width: calc(100% - 60px);
-
-    transform: translateX(-50%);
-    background-color: $color-footerline;
-
-    @include viewport--md {
-      display: none;
-    }
-  }
 }
 
 .footer__wrapper {
@@ -104,17 +87,33 @@
 .footer__copyright {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 180px;
+  width: 100%;
   min-height: 80px;
   margin: 0;
   padding: 0;
+
+  border-top: solid 1px $color-footerline;
+
+  @include viewport--md {
+    width: 183px;
+
+    border-top: none;
+  }
+
+  @include viewport--lg {
+    width: 183px;
+  }
 }
 
 .footer__logo-link {
-  margin: 0;
+  margin: 0 0 0 27px;
   padding: 0;
+
+  @include viewport--md {
+    margin: 0 0 0 28px;
+  }
 
   svg {
     fill: $color-lightdecor;
