@@ -188,10 +188,11 @@
     background-color: $color-mail;
 
     @include viewport--md {
+      bottom: 0;
       width: 204px;
     }
 
-    @include viewport--md {
+    @include viewport--lg {
       bottom: -4px;
     }
   }
