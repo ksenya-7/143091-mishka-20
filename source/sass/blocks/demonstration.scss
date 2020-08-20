@@ -12,6 +12,16 @@
 
   border: 1px solid $color-underline;
 
+  &:hover .demonstration__hover,
+  &:focus .demonstration__hover {
+    box-shadow: 0 6px 10px $color-line1;
+    outline: none;
+  }
+
+  &:active .demonstration__hover {
+    box-shadow: 0 3px 5px $color-line1;
+  }
+
   @include viewport--md {
     max-width: 668px;
     min-height: 743px;
@@ -97,7 +107,7 @@
     // align-self: start;
     max-width: 271px;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 0;
 
     font-size: 20px;
@@ -114,16 +124,6 @@
 }
 
 .demonstration__hover {
-  &:hover,
-  &:focus {
-    box-shadow: 0 6px 10px $color-line1;
-    outline: none;
-  }
-
-  &:active {
-    box-shadow: 0 3px 5px $color-line1;
-  }
-
   @include viewport--lg {
     padding: 0 0 0 79px;
   }
@@ -228,14 +228,14 @@
     width: 252px;
     min-height: 171px;
     margin: 0;
-    padding: 17px 26px 0 0;
+    padding: 0 26px 49px 0;
   }
 }
 
 .demonstration__button {
   width: 192px;
   margin: 41px auto 30px;
-  padding-bottom: 10px;
+  padding: 10px 0;
 
   line-height: 16px;
 

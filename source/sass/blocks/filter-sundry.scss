@@ -40,7 +40,7 @@
 
   font-size: 17px;
   line-height: 18px;
-  color: $color-cont3;
+  color: $color-line3;
 
   border: 2px solid $color-text;
   // box-shadow: inset 0 -2px 0 $color-text;
@@ -57,17 +57,14 @@
 
   @include viewport--lg {
     width: 700px;
-
-    color: $color-content;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     border: 2px solid $color-mail;
     outline: none;
   }
 
-  &:active {
+  &:focus {
     color: $color-content;
     border: 2px solid $color-mail;
   }
@@ -81,7 +78,7 @@
   @include viewport--md {
     justify-content: space-between;
     width: 668px;
-    margin: 48px 0 -6px 0;
+    margin: 50px 0 -6px 0;
   }
 
   @include viewport--lg {

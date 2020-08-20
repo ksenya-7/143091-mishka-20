@@ -19,7 +19,7 @@
 
   @include viewport--md {
     min-height: 237px;
-    padding: 20px 50px;
+    padding: 75px 50px 62px;
 
     font-size: 43px;
     line-height: 50px;
@@ -45,7 +45,7 @@
 
   @include viewport--lg {
     min-height: 259px;
-    padding-top: 0;
+    padding: 80px 50px 81px;
 
     font-size: 53px;
     line-height: 57px;

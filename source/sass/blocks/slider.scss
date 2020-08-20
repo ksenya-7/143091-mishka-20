@@ -48,7 +48,8 @@
   }
 }
 
-.slider__img {
+.slider__wrapper {
+  position: relative;
   background-image: none;
 
   @include viewport--md {
@@ -56,18 +57,32 @@
     min-height: 457px;
     margin: 0 auto;
     padding-top: 78px;
+  }
+
+  @include viewport--lg {
+    width: 1050px;
+  }
+}
+
+.slider__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+
+  @include viewport--md {
+    display: block;
+    width: 350px;
+    min-height: 457px;
 
     background-image: url("./../img/review@1x.jpg");
+    background-color: $color-line1;
     background-repeat: no-repeat;
     background-size: 350px 457px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/review@2x.jpg");
     }
-  }
-
-  @include viewport--lg {
-    width: 1050px;
   }
 }
 
